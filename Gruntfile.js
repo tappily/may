@@ -33,7 +33,7 @@ module.exports = function(grunt) {
       site: {
         expand: true,
         flatten: true,
-        src: 'tmp/css/*.css',
+        src: 'tmp/css/site/*.css',
         dest: '<%= assemble.options.assets %>/css/'
       }
     },
@@ -94,12 +94,23 @@ module.exports = function(grunt) {
       sources: ['src/js/**/*.js']
     },
     less: {
-      files: {
-        expand: true,
-        cwd: 'src/less',
-        src: ['*.less'],
-        dest: 'tmp/css/',
-        ext: '.css'
+      live: {
+        options: {
+          sourceMap: true,
+
+          sourceMapFilename: 'tmp/css/<%= pkg.name %>.map'
+        },
+        //modifyVars: {
+        //  assets: '"//mycdn.com/path/to/images"',
+        //  cleancss: true,
+        //},
+        files: [{
+          expand: true,
+          cwd: 'src/less/site',
+          src: ['*.less'],
+          dest: 'tmp/css/',
+          ext: '.css'
+        }]
       }
     },
     newer: {},
