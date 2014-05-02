@@ -1,0 +1,41 @@
+{
+  "name": "may",
+  "version": "0.0.0",
+  "description": "",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tappily/may.git"
+  },
+  "keywords": [
+    "CSS",
+    "JS",
+    "HTML5"
+  ],
+  "author": "tappily.b",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tappily/may/issues"
+  },
+  "homepage": "https://github.com/tappily/may",
+  "devDependencies": {
+    "assemble": "^0.4.37",
+    "grunt": "^0.4.4",
+    "grunt-autoprefixer": "^0.7.2",
+    "grunt-contrib-clean": "^0.5.0",
+    "grunt-contrib-connect": "^0.7.1",
+    "grunt-contrib-copy": "^0.5.0",
+    "grunt-contrib-csslint": "^0.2.0",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-contrib-less": "^0.11.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-gh-pages": "^0.9.1",
+    "grunt-newer": "^0.7.0",
+    "helper-aggregate": "^0.1.2",
+    "load-grunt-tasks": "^0.4.0",
+    "time-grunt": "^0.3.1"
+  }
+}

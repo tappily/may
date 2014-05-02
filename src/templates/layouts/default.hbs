@@ -1,0 +1,25 @@
+<!doctype html>
+{{#detect-html detect/ie}}<html lang="en">{{/detect-html}}
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>{{default title (sentence page.basename)}}</title>
+    <meta name="description" content="{{default description site.description}}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">{{!
+  }}{{#with styles}}{{{css .}}}{{/with}}{{!
+  }}{{> webfont}}{{!
+  }}{{> remedy}}
+</head>
+<body>
+<header>
+  {{> header }}
+</header>
+<main>
+  {{> body }}
+</main>
+<footer>
+  {{> footer}}
+</footer>{{!
+}}{{#with scripts}}{{{js .}}}{{/with}}
+</body>
+</html>

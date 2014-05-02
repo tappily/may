@@ -1,0 +1,7 @@
+{{#with webfont/google}}
+    <link rel="stylesheet" href="//{{host}}/css?family={{#each faces}}{{#if @first}}{{else}}|{{/if}}{{plusify family}}:{{#each styles}}{{#if @first}}{{else}},{{/if}}{{weight}}{{lowercase style}}{{/each}}{{/each}}">
+{{/with}}{{!
+}}{{#with webfont/typekit}}
+    <script src="//{{host}}/{{id}}.js"></script>
+    <script>try{Typekit.load();}catch(e){}</script>
+{{/with}}

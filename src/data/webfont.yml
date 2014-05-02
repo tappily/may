@@ -1,0 +1,10 @@
+google:
+  host: fonts.googleapis.com
+  faces:
+    - family: Source Sans Pro
+      styles:
+        - weight: 200
+        - weight: 400
+        - weight: 700
+        - weight: 200
+          style: italic
