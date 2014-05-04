@@ -31,10 +31,7 @@ module.exports = function (grunt) {
         dest: 'dist/css/'
       },
       site: {
-        expand: true,
-        flatten: true,
-        src: 'tmp/css/site/*.css',
-        dest: '<%= assemble.options.assets %>/css/'
+        src: '<%= assemble.options.assets %>/css/*.css'
       }
     },
     clean: {
@@ -96,7 +93,7 @@ module.exports = function (grunt) {
       sources: ['src/**/*.js']
     },
     less: {
-      live: {
+      site: {
         options: {
           sourceMap: true,
           outputSourceFiles: true,
@@ -107,7 +104,7 @@ module.exports = function (grunt) {
             expand: true,
             cwd: 'src/less/site',
             src: ['*.less'],
-            dest: 'tmp/css/',
+            dest: '<%= assemble.options.assets %>/css/',
             ext: '.css'
           }
         ]
@@ -133,7 +130,7 @@ module.exports = function (grunt) {
       },
       less: {
         files: 'src/**/*.less',
-        tasks: ['less', 'newer:autoprefixer:site', 'newer:csslint:site']
+        tasks: ['less:site', 'newer:autoprefixer:site', 'newer:csslint:site']
       },
       template: {
         files: 'src/templates/**/*.{js,hbs}',
@@ -145,7 +142,7 @@ module.exports = function (grunt) {
   grunt.registerTask('default', [ 'test' ]);
   grunt.registerTask('test', ['clean', 'jshint', 'less', 'autoprefixer', 'csslint']);
   grunt.registerTask('build', ['clean', 'jshint', 'less', 'autoprefixer:dist', 'csslint:dist']);
-  grunt.registerTask('site', ['clean', 'jshint', 'less', 'autoprefixer:site', 'csslint:site', 'assemble:site', 'copy:assets']);
+  grunt.registerTask('site', ['clean', 'jshint', 'less:site', 'autoprefixer:site', 'csslint:site', 'assemble:site', 'copy:assets']);
   grunt.registerTask('deploy', ['site', 'gh-pages']);
   grunt.registerTask('live', ['site', 'connect:site', 'watch']);
 };
