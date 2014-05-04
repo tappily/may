@@ -1,8 +1,9 @@
-//imports
-@import (reference) "//fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,700";
+//defaults
+@font: 'Helvetica Neue', sans-serif;
 
+//define
 :root {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: @font;
 }
 
 @line-length: 42rem;
@@ -94,7 +95,7 @@ header {
     position: relative;
 
     &:focus {
-      outline: initial;
+      outline: none;
       background-color: #666666;
 
       &::-webkit-input-placeholder {
