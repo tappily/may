@@ -1,4 +1,4 @@
-module.exports = function(grunt) {
+module.exports = function (grunt) {
   'use strict';
 
   require('load-grunt-tasks')(grunt, {
@@ -33,7 +33,7 @@ module.exports = function(grunt) {
       site: {
         expand: true,
         flatten: true,
-        src: 'tmp/css/*.css',
+        src: 'tmp/css/site/*.css',
         dest: '<%= assemble.options.assets %>/css/'
       }
     },
@@ -56,13 +56,15 @@ module.exports = function(grunt) {
     },
     copy: {
       assets: {
-        files: [{
-          expand: true,
-          cwd: 'src/assets',
-          src: ['**/*'],
-          dest: '<%= connect.site.options.base %>/assets/',
-          filter: 'isFile'
-        }]
+        files: [
+          {
+            expand: true,
+            cwd: 'src/assets',
+            src: ['**/*'],
+            dest: '<%= connect.site.options.base %>/assets/',
+            filter: 'isFile'
+          }
+        ]
       }
     },
     csslint: {
@@ -90,16 +92,25 @@ module.exports = function(grunt) {
       options: {
         jshintrc: '.jshintrc'
       },
-      configurations: ['Gruntfile.js','bower.json','package.json'],
-      sources: ['src/js/**/*.js']
+      configurations: ['Gruntfile.js', 'bower.json', 'package.json'],
+      sources: ['src/**/*.js']
     },
     less: {
-      files: {
-        expand: true,
-        cwd: 'src/less',
-        src: ['*.less'],
-        dest: 'tmp/css/',
-        ext: '.css'
+      live: {
+        options: {
+          sourceMap: true,
+          outputSourceFiles: true,
+          modifyVars: {}
+        },
+        files: [
+          {
+            expand: true,
+            cwd: 'src/less/site',
+            src: ['*.less'],
+            dest: 'tmp/css/',
+            ext: '.css'
+          }
+        ]
       }
     },
     newer: {},
