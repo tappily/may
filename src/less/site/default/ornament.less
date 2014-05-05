@@ -1,0 +1,16 @@
+.ornament-flex-rule(...) {
+  display: flex;
+  flex-flow: row;
+  text-align: center;
+
+  &:before, &:after {
+    content: "";
+    display: block;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+    border-top: @arguments;
+    transform: translateY(50%);
+    margin: 0 1ex;
+  }
+}

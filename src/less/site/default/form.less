@@ -1,0 +1,220 @@
+//import
+
+//defaults
+@form-fill: #FFF;
+@form-color: #666D70;
+@form-font: inherit;
+@form-font-size: inherit;
+@form-font-weight: 200;
+@form-read-weight: 400;
+@form-start: left;
+@form-end: right;
+@form-focus-color: @form-color;
+@form-submit-color: #0176E8;
+@form-reset-color: #AEAFB3;
+@form-valid-color: @form-submit-color;
+@form-invalid-color: #FC1209;
+@form-shade: transparent;
+@form-border-weight: 0.1em;
+@form-submit-button-border: 0;
+@form-submit-button-border: 0;
+@form-button-border: 1;
+@form-wireframe: 0;
+
+//define
+@form-slant: 45deg;
+@form-slant-up: (360deg - @form-slant);
+
+.form-weight() when (@form-font-weight < 400) {
+  @form-border-weight: 0.067em;
+}
+
+.form-button-colors(@base) {
+  background-color: @base;
+  color: contrast(@base);
+  text-shadow: 0 0.05em 0.025em fade(contrast(contrast(@base)), 50%);
+}
+
+.form-button-border(@weight) when (@weight > 0) {
+  .form-weight();
+  box-shadow+: inset 0 0 0 @form-border-weight * @weight;
+}
+
+.form-button-border(@weight) when (@weight = 0) {
+  box-shadow: initial;
+}
+
+.form-button-border(@weight:0) {
+  border: initial;
+}
+
+.form-check(@color: @form-color, @angle:(@form-slant-up - 180deg)) {
+  background-image: linear-gradient(@angle, @color 50%, transparent 50%);
+}
+
+form {
+  .form-weight();
+  background-color: @form-fill;
+  color: @form-color;
+  font-family: @form-font;
+  font-weight: @form-font-weight;
+
+  label, button, input[type=text] {
+    margin-@{form-end}: 1ex;
+    padding: 1ex 1em;
+    margin-top: 1ex;
+    margin-bottom: 1ex;
+    display: inline-block;
+  }
+
+  button[type=submit] {
+    .form-button-colors(@form-submit-color);
+    .form-button-border(0);
+  }
+
+  button[type=reset] {
+    .form-button-colors(@form-reset-color);
+    .form-button-border(0);
+  }
+
+  label, output, input[readonly] {
+    text-shadow: 0 0.05em 0.025em @form-shade;
+  }
+
+  input[type=checkbox],
+  input[type=radio] {
+    position: absolute;
+    bottom: 100%;
+
+    & + label {
+      &:before {
+        content: "";
+        display: inline-block;
+        width: 0.75em;
+        height: 0.75em;
+        line-height: 1;
+        box-sizing: border-box;
+        border: @form-border-weight solid;
+        margin-@{form-end}: 1ex;
+        box-shadow: inset 0 0 0.025em 0.125em @form-fill, 0 0.05em 0.025em @form-shade;
+      }
+    }
+
+    &:focus + label {
+      text-decoration: underline;
+    }
+  }
+
+  input[type=checkbox] {
+
+    &:checked + label {
+      &:before {
+        .form-check();
+        background-repeat: no-repeat;
+      }
+    }
+
+  }
+
+  input[type=radio] {
+
+    + label:before {
+      border-radius: 50%;
+    }
+
+    &:checked + label {
+      &:before {
+        background-color: @form-color;
+      }
+    }
+
+  }
+
+  input[type=text], input[list], output {
+    box-sizing: border-box;
+    display: inline-block;
+    max-width: 100%;
+    //width: auto;
+    background-color: initial;
+    border: initial;
+    box-shadow: inset 0 (@form-border-weight * -1) 0 0;
+
+    &:focus {
+      outline: none;
+      background-color: @form-focus-color;
+      @color: contrast(@form-focus-color);
+      color: @color;
+
+      &::-webkit-input-placeholder {
+        color: @color;
+      }
+
+      &::-moz-placeholder {
+        color: @color;
+      }
+
+      &:-ms-input-placeholder {
+        color: @color;
+      }
+    }
+
+  }
+
+  input[list] {
+    padding-@{form-end}: 1ex;
+  }
+
+  input[required] {
+
+    @angle: (360deg - 45deg);
+
+    .form-check(@form-color, @form-slant-up);
+
+    &[class]:focus {
+      background-image: initial;
+    }
+
+    background-repeat: no-repeat;
+    background-size: 1em 1em;
+    background-position: 100% 1em;
+
+    &:valid {
+      .form-check(@form-valid-color, @form-slant-up);
+      box-shadow: inset 0 (@form-border-weight * -1) 0 0 @form-valid-color;
+    }
+
+    &:invalid {
+      .form-check(@form-invalid-color, @form-slant-up);
+      box-shadow: inset 0 (@form-border-weight * -1) 0 0 @form-invalid-color;
+    }
+
+  }
+
+  input[readonly], output {
+    .form-button-border(0);
+    font-weight: @form-read-weight;
+  }
+
+  input[disabled] {
+    color: desaturate(@form-color, 100%);
+    opacity: 0.5;
+  }
+
+  button {
+    border-radius: 0.25em;
+    .form-button-border(@form-button-border);
+    background-color: initial;
+
+    &:focus {
+      text-decoration: underline;
+      outline: initial;
+    }
+  }
+
+  fieldset {
+    border: initial;
+    box-shadow: inset 0 @form-border-weight 0 0, inset 0 (@form-border-weight * -1) 0 0;
+    padding: 1ex 0;
+  }
+
+}

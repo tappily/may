@@ -7,6 +7,7 @@ module.exports = function (grunt) {
   });
 
   grunt.initConfig({
+    webfont: grunt.file.readYAML('src/data/webfont.yml'),
     pkg: grunt.file.readJSON('package.json'),
     assemble: {
       options: {
@@ -35,6 +36,14 @@ module.exports = function (grunt) {
         },
         src: ['src/templates/site/products/*.hbs'],
         dest: '<%= connect.site.options.base %>/products/'
+      },
+      inputs: {
+        options: {
+          data: ['src/data/input/*.{yml,json}'],
+          layout: 'input.hbs'
+        },
+        src: ['src/templates/site/inputs/*.hbs'],
+        dest: '<%= connect.site.options.base %>/inputs/'
       },
       articles: {
         options: {
@@ -119,7 +128,9 @@ module.exports = function (grunt) {
         options: {
           sourceMap: true,
           outputSourceFiles: true,
-          modifyVars: {}
+          modifyVars: {
+            font: '<%= webfont.typekit.faces.0.family %>'
+          }
         },
         files: [
           {
