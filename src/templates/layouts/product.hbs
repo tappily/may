@@ -1,0 +1,18 @@
+{{#extend 'default'}}
+  {{#content 'styles' mode='append'}}
+    {{{css 'product.css'}}}
+    <link rel="stylesheet" href="{{assets}}/css/product/{{basename}}.css"/>
+  {{/content}}
+  {{#content 'header'}}<header>{{> header}}</header>{{/content}}
+  {{#content 'main'}}<main>
+    {{> figure}}
+    {{> offer}}
+    {{> tabs}}
+    {{> offers}}
+  </main>{{/content}}
+  {{#content 'footer'}}<footer>{{> footer}}</footer>{{/content}}
+  {{!#content 'scripts' mode='append'}}
+    {{!{js 'product.js'}}}
+    <!--<script src="{{assets}}/js/product/{{basename}}.js"></script>-->
+  {{!/content}}
+{{/extend}}

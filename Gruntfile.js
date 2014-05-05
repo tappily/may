@@ -14,13 +14,35 @@ module.exports = function (grunt) {
         data: ['package.json', 'src/data/*.{yml,json}'],
         helpers: 'src/templates/helpers/helper-*.js',
         layoutdir: 'src/templates/layouts',
-        partials: 'src/templates/partials/*.hbs',
+        partials: [
+          'src/templates/partials/*.hbs',
+          'src/templates/layouts/*.hbs'],
         layout: 'default.hbs',
         flatten: true
       },
-      site: {
+      indices: {
+        options: {
+          data: ['src/data/index/*.{yml,json}'],
+          layout: 'index.hbs'
+        },
         src: ['src/templates/site/*.hbs'],
         dest: '<%= connect.site.options.base %>/'
+      },
+      products: {
+        options: {
+          data: ['src/data/products/*.{yml,json}'],
+          layout: 'product.hbs'
+        },
+        src: ['src/templates/site/products/*.hbs'],
+        dest: '<%= connect.site.options.base %>/products/'
+      },
+      articles: {
+        options: {
+          data: ['src/data/article/*.{yml,json}'],
+          layout: 'article.hbs'
+        },
+        src: ['src/templates/site/articles/*.hbs'],
+        dest: '<%= connect.site.options.base %>/articles/'
       }
     },
     autoprefixer: {
@@ -103,7 +125,7 @@ module.exports = function (grunt) {
           {
             expand: true,
             cwd: 'src/less/site',
-            src: ['*.less'],
+            src: ['**/!(_)*.less'],
             dest: '<%= assemble.options.assets %>/css/',
             ext: '.css'
           }
@@ -126,7 +148,7 @@ module.exports = function (grunt) {
       },
       json: {
         files: ['src/data/**/*'],
-        tasks: ['newer:jshint', 'assemble:site']
+        tasks: ['newer:jshint', 'assemble']
       },
       less: {
         files: 'src/**/*.less',
@@ -134,7 +156,7 @@ module.exports = function (grunt) {
       },
       template: {
         files: 'src/templates/**/*.{js,hbs}',
-        tasks: ['assemble:site']
+        tasks: ['assemble']
       }
     }
   });
@@ -142,7 +164,7 @@ module.exports = function (grunt) {
   grunt.registerTask('default', [ 'test' ]);
   grunt.registerTask('test', ['clean', 'jshint', 'less', 'autoprefixer', 'csslint']);
   grunt.registerTask('build', ['clean', 'jshint', 'less', 'autoprefixer:dist', 'csslint:dist']);
-  grunt.registerTask('site', ['clean', 'jshint', 'less:site', 'autoprefixer:site', 'csslint:site', 'assemble:site', 'copy:assets']);
+  grunt.registerTask('site', ['clean', 'jshint', 'less:site', 'autoprefixer:site', 'csslint:site', 'assemble', 'copy:assets']);
   grunt.registerTask('deploy', ['site', 'gh-pages']);
   grunt.registerTask('live', ['site', 'connect:site', 'watch']);
 };

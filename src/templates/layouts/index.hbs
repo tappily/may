@@ -1,0 +1,11 @@
+{{#extend 'default'}}
+  {{#content 'styles' mode='append'}}
+    {{{css 'index.css'}}}
+  {{/content}}
+  {{#content 'header'}}<header>{{> header}}</header>{{/content}}
+  {{#content 'main'}}<main>{{> body}}</main>{{/content}}
+  {{#content 'footer'}}<footer>{{> footer}}</footer>{{/content}}
+  {{#content 'scripts' mode='append'}}
+    {{{js 'index.js'}}}
+  {{/content}}
+{{/extend}}

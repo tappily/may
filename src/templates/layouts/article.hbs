@@ -1,0 +1,18 @@
+{{#extend 'default'}}
+  {{#content 'header'}}<header>{{> header}}</header>{{/content}}
+  {{#content 'main'}}
+    <article>
+      <h1>{{default title (sentence page.basename)}}</h1>
+      {{> body}}
+      {{#block 'address'}}
+          <address></address>
+      {{/block}}
+    </article>
+    {{#block 'aside'}}
+        <aside></aside>
+    {{/block}}
+  {{/content}}
+  {{#content 'footer'}}
+      <footer>{{> footer}}</footer>
+  {{/content}}
+{{/extend}}
