@@ -175,20 +175,6 @@ module.exports = function (grunt) {
     }
   });
 
-  grunt.task.registerMultiTask('assemble-products', 'Multi assembly', function() {
-    //if(this.target === 'languages')
-    //grunt.option('product');
-    //grunt.task.run(['assemble']);
-    this.data.forEach(function(l) {
-      this.options({
-
-      });
-      grunt.log.writeln(l);
-      //grunt.config.set('assemble.products.dest', '<%= connect.site.options.base %>/products/' + l + '/');
-      //grunt.task.run(['assemble:products']);
-    });
-  });
-
   grunt.task.registerTask('default', [ 'test' ]);
   grunt.task.registerTask('test', ['clean', 'jshint', 'less', 'autoprefixer', 'csslint']);
   grunt.task.registerTask('build', ['clean', 'jshint', 'less', 'autoprefixer:dist', 'csslint:dist']);
