@@ -10,17 +10,7 @@
     </menu>
   {{#each sections}}
       <section>
-          <figure id="{{id}}" class="hero">
-              <span class="image"></span>
-              <label></label>
-            {{#with caption}}
-                <figcaption>
-                  {{#with title}}<span class="title">{{.}}</span>{{/with}}
-                  {{#with detail}}<span class="detail">{{.}}</span>{{/with}}
-                  {{#with button}}<span class="button">{{.}}</span>{{/with}}
-                </figcaption>
-            {{/with}}
-          </figure>
+          {{> figure .}}
       </section>
   {{/each}}
 </div>

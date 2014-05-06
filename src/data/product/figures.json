@@ -6,6 +6,9 @@
     {
       "id": "hero-1",
       "label": "What is love",
+      "video": {
+
+      },
       "caption": {
         "title": "Tea-green leggings.",
         "detail": "Dress skirt luxe playsuit knot ponytail. Minimal beauty vintage Lanvin neutral cami braid shoe mint Casio LA.",
@@ -33,6 +36,9 @@
     {
       "id": "hero-4",
       "label": "no more",
+      "video": {
+
+      },
       "caption": {
         "title": "Dove grey oversized clutch sunglasses relaxed dress.",
         "detail": "Luggage button up ribbed shoe.",
