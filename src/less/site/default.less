@@ -6,7 +6,7 @@
 @import "default/offer";
 @import "default/tabs";
 @import "default/keyframes";
-@import "default/form";
+@import "default/task";
 
 //defaults
 @font: 'Helvetica Neue', sans-serif;
@@ -25,6 +25,13 @@
 body {
   margin: 0;
   min-height: 100vh;
+  display: flex;
+  flex-flow: column;
+  justify-content: stretch;
+}
+
+main {
+  flex: 1;
 }
 
 //offers

@@ -5,7 +5,7 @@
 @form-color: #666D70;
 @form-font: inherit;
 @form-font-size: inherit;
-@form-font-weight: 200;
+@form-font-weight: 300;
 @form-read-weight: 400;
 @form-start: left;
 @form-end: right;
@@ -52,12 +52,14 @@
   background-image: linear-gradient(@angle, @color 50%, transparent 50%);
 }
 
-form {
+.task {
   .form-weight();
+  margin: 4rem;
   background-color: @form-fill;
   color: @form-color;
   font-family: @form-font;
   font-weight: @form-font-weight;
+  font-size: @form-font-size;
 
   label, button, input[type=text] {
     margin-@{form-end}: 1ex;
@@ -79,6 +81,10 @@ form {
 
   label, output, input[readonly] {
     text-shadow: 0 0.05em 0.025em @form-shade;
+  }
+
+  input, button {
+    font: inherit;
   }
 
   input[type=checkbox],

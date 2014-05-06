@@ -9,6 +9,9 @@ module.exports = function (grunt) {
   grunt.initConfig({
     webfont: grunt.file.readYAML('src/data/webfont.yml'),
     pkg: grunt.file.readJSON('package.json'),
+    'assemble-products': {
+      targets: ['ai', 'ps']
+    },
     assemble: {
       options: {
         assets: '<%= connect.site.options.base %>/assets',
@@ -37,13 +40,13 @@ module.exports = function (grunt) {
         src: ['src/templates/site/products/*.hbs'],
         dest: '<%= connect.site.options.base %>/products/'
       },
-      inputs: {
+      tasks: {
         options: {
-          data: ['src/data/input/*.{yml,json}'],
-          layout: 'input.hbs'
+          data: ['src/data/tasks/*.{yml,json}'],
+          layout: 'task.hbs'
         },
-        src: ['src/templates/site/inputs/*.hbs'],
-        dest: '<%= connect.site.options.base %>/inputs/'
+        src: ['src/templates/site/tasks/*.hbs'],
+        dest: '<%= connect.site.options.base %>/tasks/'
       },
       articles: {
         options: {
@@ -172,10 +175,24 @@ module.exports = function (grunt) {
     }
   });
 
-  grunt.registerTask('default', [ 'test' ]);
-  grunt.registerTask('test', ['clean', 'jshint', 'less', 'autoprefixer', 'csslint']);
-  grunt.registerTask('build', ['clean', 'jshint', 'less', 'autoprefixer:dist', 'csslint:dist']);
-  grunt.registerTask('site', ['clean', 'jshint', 'less:site', 'autoprefixer:site', 'csslint:site', 'assemble', 'copy:assets']);
-  grunt.registerTask('deploy', ['site', 'gh-pages']);
-  grunt.registerTask('live', ['site', 'connect:site', 'watch']);
+  grunt.task.registerMultiTask('assemble-products', 'Multi assembly', function() {
+    //if(this.target === 'languages')
+    //grunt.option('product');
+    //grunt.task.run(['assemble']);
+    this.data.forEach(function(l) {
+      this.options({
+
+      });
+      grunt.log.writeln(l);
+      //grunt.config.set('assemble.products.dest', '<%= connect.site.options.base %>/products/' + l + '/');
+      //grunt.task.run(['assemble:products']);
+    });
+  });
+
+  grunt.task.registerTask('default', [ 'test' ]);
+  grunt.task.registerTask('test', ['clean', 'jshint', 'less', 'autoprefixer', 'csslint']);
+  grunt.task.registerTask('build', ['clean', 'jshint', 'less', 'autoprefixer:dist', 'csslint:dist']);
+  grunt.task.registerTask('site', ['clean', 'jshint', 'less:site', 'autoprefixer:site', 'csslint:site', 'assemble', 'copy:assets']);
+  grunt.task.registerTask('deploy', ['site', 'gh-pages']);
+  grunt.task.registerTask('live', ['site', 'connect:site', 'watch']);
 };
