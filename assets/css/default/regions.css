@@ -1,0 +1,121 @@
+#regions-visible {
+  position: fixed;
+  top: 50%;
+  right: 100%;
+  z-index: -1;
+}
+#regions-visible ~ .regions {
+  visibility: hidden;
+  opacity: 0;
+  animation: delay-vis 0.3s;
+  transition: opacity 0.3s;
+}
+#regions-visible:checked ~ .regions {
+  animation-name: delay-vis-2;
+  visibility: visible;
+  opacity: 1;
+}
+#regions-visible:focus ~ label[for=regions-visible] {
+  text-decoration: underline;
+}
+#regions-visible:checked ~ label[for=regions-visible] {
+  color: white;
+}
+#regions-visible:checked ~ label[for=regions-visible]:before {
+  content: "";
+  display: block;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+}
+.regions {
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #F7F7F7;
+  color: #222222;
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 0;
+  line-height: 1.33;
+}
+@media only screen and (max-width: 60rem) {
+  .regions {
+    overflow-y: auto;
+    max-width: 100%;
+    max-height: 80vh;
+    bottom: 100%;
+  }
+}
+.regions button {
+  text-align: left;
+  border: none;
+  background: inherit;
+  padding: 0;
+  margin: 0;
+}
+.regions button:focus {
+  text-decoration: underline;
+  outline: none;
+}
+.regions label[for=regions-visible] {
+  display: flex;
+  flex-flow: row;
+  text-align: center;
+  margin: 1.33em 1.5em;
+}
+.regions label[for=regions-visible]:before,
+.regions label[for=regions-visible]:after {
+  content: "";
+  display: block;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
+  border-top: 0.1em solid;
+  transform: translateY(50%);
+  margin: 0 1ex;
+}
+.regions dl {
+  column-width: 12rem;
+  column-gap: 2rem;
+  width: 100%;
+  max-height: 50em;
+  padding: 0 2em;
+  margin: 1.67em 0;
+  box-sizing: border-box;
+  overflow: auto;
+}
+.regions dl:before {
+  content: "";
+  display: block;
+  background-color: inherit;
+  height: 4ex;
+  width: 100%;
+  opacity: .67;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.regions dl dt,
+.regions dl dd {
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+.regions dl dt {
+  break-before: always;
+  break-inside: avoid-column;
+  font-weight: 700;
+}
+.regions dl dd {
+  break-inside: avoid-column;
+  padding: 0;
+}
+.regions dl dd + dt {
+  margin-top: 1.33em;
+}
+/*# sourceMappingURL=data:application/json,%7B%22version%22%3A3%2C%22sources%22%3A%5B%22src%2Fless%2Fsite%2Fdefault%2Fregions.less%22%2C%22src%2Fless%2Fsite%2Fdefault%2Fornament.less%22%5D%2C%22names%22%3A%5B%5D%2C%22mappings%22%3A%22AAMA%3BEACE%2CeAAA%3BEACA%2CQAAA%3BEACA%2CWAAA%3BEACA%2CWAAA%3B%3BAAJF%2CgBAME%3BEACE%2CkBAAA%3BEACA%2CUAAA%3BEACA%2CyBAAA%3BEACA%2CwBAAA%3B%3BAAGF%2CgBAAC%2CQAAS%3BEACR%2C2BAAA%3BEACA%2CmBAAA%3BEACA%2CUAAA%3B%3BAAGF%2CgBAAC%2CMAAO%2CQAAO%3BEACb%2C0BAAA%3B%3BAAEF%2CgBAAC%2CQAAS%2CQAAO%3BEACf%2CYAAA%3B%3BAACA%2CgBAFD%2CQAAS%2CQAAO%2CqBAEd%3BEACC%2CSAAS%2CEAAT%3BEACA%2CcAAA%3BEACA%2CoCAAA%3BEACA%2CeAAA%3BEACA%2CMAAA%3BEACA%2COAAA%3BEACA%2CYAAA%3BEACA%2CaAAA%3BEACA%2CWAAA%3B%3BAAKN%3BEACE%2CWAAA%3BEACA%2CsBAAA%3BEACA%2CyBAAA%3BEACA%2CcAAA%3BEACA%2CkBAAA%3BEACA%2CUAAA%3BEACA%2CYAAA%3BEACA%2COAAA%3BEACA%2CiBAAA%3B%3BAASA%2CwBAP0C%3BEAO1C%3BIANE%2CgBAAA%3BIACA%2CeAAA%3BIACA%2CgBAAA%3BIACA%2CYAAA%3B%3B%3BAAfJ%2CQAkBE%3BEACE%2CgBAAA%3BEACA%2CYAAA%3BEACA%2CmBAAA%3BEACA%2CUAAA%3BEACA%2CSAAA%3B%3BAAEA%2CQAPF%2COAOG%3BEACC%2C0BAAA%3BEACA%2CaAAA%3B%3BAA3BN%2CQA%2BBE%2CMAAK%3BEC1EL%2CaAAA%3BEACA%2CcAAA%3BEACA%2CkBAAA%3BED0EE%2CoBAAA%3B%3BACxEF%2CQDsEA%2CMAAK%2CqBCtEJ%3BAAAS%2CQDsEV%2CMAAK%2CqBCtEM%3BEACT%2CSAAS%2CEAAT%3BEACA%2CcAAA%3BEACA%2CYAAA%3BEACA%2CcAAA%3BEACA%2CgBAAA%3BEACA%2CuBAAA%3BEACA%2CWAAW%2CeAAX%3BEACA%2CaAAA%3B%3BAD%2BBJ%2CQAoCE%3BEACE%2CmBAAA%3BEACA%2CgBAAA%3BEACA%2CWAAA%3BEACA%2CgBAAA%3BEACA%2CcAAA%3BEACA%2CgBAAA%3BEACA%2CsBAAA%3BEACA%2CcAAA%3B%3BAAEA%2CQAVF%2CGAUG%3BEACC%2CSAAS%2CEAAT%3BEACA%2CcAAA%3BEACA%2CyBAAA%3BEACA%2CWAAA%3BEACA%2CWAAA%3BEACA%2CYAAA%3BEACA%2CkBAAA%3BEACA%2COAAA%3BEACA%2CSAAA%3B%3BAAvDN%2CQAoCE%2CGAsBE%3BAA1DJ%2CQAoCE%2CGAsBM%3BEACF%2CcAAA%3BEACA%2CUAAA%3BEACA%2CSAAA%3B%3BAA7DN%2CQAoCE%2CGA4BE%3BEACE%2CoBAAA%3BEACA%2C0BAAA%3BEACA%2CgBAAA%3B%3BAAnEN%2CQAoCE%2CGAmCE%3BEACE%2C0BAAA%3BEAKA%2CUAAA%3B%3BAA7EN%2CQAoCE%2CGAmCE%2CGAEE%3BEACE%2CkBAAA%22%2C%22sourcesContent%22%3A%5B%22%2F%2Fimports%5Cn%40import%20%5C%22ornament%5C%22%3B%5Cn%5Cn%2F%2Fdefaults%5Cn%5Cn%2F%2Fdefine%5Cn%23regions-visible%20%7B%5Cn%20%20position%3A%20fixed%3B%5Cn%20%20top%3A%2050%25%3B%5Cn%20%20right%3A%20100%25%3B%5Cn%20%20z-index%3A%20-1%3B%5Cn%5Cn%20%20~%20.regions%20%7B%5Cn%20%20%20%20visibility%3A%20hidden%3B%5Cn%20%20%20%20opacity%3A%200%3B%5Cn%20%20%20%20animation%3A%20delay-vis%200.3s%3B%5Cn%20%20%20%20transition%3A%20opacity%200.3s%3B%5Cn%20%20%7D%5Cn%5Cn%20%20%26%3Achecked%20~%20.regions%20%7B%5Cn%20%20%20%20animation-name%3A%20delay-vis-2%3B%5Cn%20%20%20%20visibility%3A%20visible%3B%5Cn%20%20%20%20opacity%3A%201%3B%5Cn%20%20%7D%5Cn%5Cn%20%20%26%3Afocus%20~%20label%5Bfor%3Dregions-visible%5D%20%7B%5Cn%20%20%20%20text-decoration%3A%20underline%3B%5Cn%20%20%7D%5Cn%20%20%26%3Achecked%20~%20label%5Bfor%3Dregions-visible%5D%20%7B%5Cn%20%20%20%20color%3A%20white%3B%5Cn%20%20%20%20%26%3Abefore%20%7B%5Cn%20%20%20%20%20%20content%3A%20%5C%22%5C%22%3B%5Cn%20%20%20%20%20%20display%3A%20block%3B%5Cn%20%20%20%20%20%20background-color%3A%20fade(black%2C%2050%25)%3B%5Cn%20%20%20%20%20%20position%3A%20fixed%3B%5Cn%20%20%20%20%20%20top%3A%200%3B%5Cn%20%20%20%20%20%20left%3A%200%3B%5Cn%20%20%20%20%20%20width%3A%20100vw%3B%5Cn%20%20%20%20%20%20height%3A%20100vh%3B%5Cn%20%20%20%20%20%20z-index%3A%20-1%3B%5Cn%20%20%20%20%7D%5Cn%20%20%7D%5Cn%7D%5Cn%5Cn.regions%20%7B%5Cn%20%20width%3A%20100%25%3B%5Cn%20%20box-sizing%3A%20border-box%3B%5Cn%20%20background-color%3A%20%23F7F7F7%3B%5Cn%20%20color%3A%20%23222222%3B%5Cn%20%20position%3A%20absolute%3B%5Cn%20%20z-index%3A%201%3B%5Cn%20%20bottom%3A%20100%25%3B%5Cn%20%20left%3A%200%3B%5Cn%20%20line-height%3A%201.33%3B%5Cn%5Cn%20%20%40media%20only%20screen%20and%20(max-width%3A%2060rem)%20%7B%5Cn%20%20%20%20overflow-y%3A%20auto%3B%5Cn%20%20%20%20max-width%3A%20100%25%3B%5Cn%20%20%20%20max-height%3A%2080vh%3B%5Cn%20%20%20%20bottom%3A%20100%25%3B%5Cn%20%20%7D%5Cn%5Cn%20%20button%20%7B%5Cn%20%20%20%20text-align%3A%20left%3B%5Cn%20%20%20%20border%3A%20none%3B%5Cn%20%20%20%20background%3A%20inherit%3B%5Cn%20%20%20%20padding%3A%200%3B%5Cn%20%20%20%20margin%3A%200%3B%5Cn%5Cn%20%20%20%20%26%3Afocus%20%7B%5Cn%20%20%20%20%20%20text-decoration%3A%20underline%3B%5Cn%20%20%20%20%20%20outline%3A%20none%3B%5Cn%20%20%20%20%7D%5Cn%20%20%7D%5Cn%5Cn%20%20label%5Bfor%3Dregions-visible%5D%20%7B%5Cn%20%20%20%20.ornament-flex-rule(0.1em%20solid)%3B%5Cn%20%20%20%20margin%3A%201.33em%201.5em%3B%5Cn%20%20%7D%5Cn%5Cn%20%20dl%20%7B%5Cn%20%20%20%20column-width%3A%2012rem%3B%5Cn%20%20%20%20column-gap%3A%202rem%3B%5Cn%20%20%20%20width%3A%20100%25%3B%5Cn%20%20%20%20max-height%3A%2050em%3B%5Cn%20%20%20%20padding%3A%200%202em%3B%5Cn%20%20%20%20margin%3A%201.67em%200%3B%5Cn%20%20%20%20box-sizing%3A%20border-box%3B%5Cn%20%20%20%20overflow%3A%20auto%3B%5Cn%5Cn%20%20%20%20%26%3Abefore%20%7B%5Cn%20%20%20%20%20%20content%3A%20%5C%22%5C%22%3B%5Cn%20%20%20%20%20%20display%3A%20block%3B%5Cn%20%20%20%20%20%20background-color%3A%20inherit%3B%5Cn%20%20%20%20%20%20height%3A%204ex%3B%5Cn%20%20%20%20%20%20width%3A%20100%25%3B%5Cn%20%20%20%20%20%20opacity%3A%20.67%3B%5Cn%20%20%20%20%20%20position%3A%20absolute%3B%5Cn%20%20%20%20%20%20left%3A%200%3B%5Cn%20%20%20%20%20%20bottom%3A%200%3B%5Cn%20%20%20%20%7D%5Cn%5Cn%20%20%20%20dt%2C%20dd%20%7B%5Cn%20%20%20%20%20%20display%3A%20block%3B%5Cn%20%20%20%20%20%20padding%3A%200%3B%5Cn%20%20%20%20%20%20margin%3A%200%3B%5Cn%20%20%20%20%7D%5Cn%5Cn%20%20%20%20dt%20%7B%5Cn%20%20%20%20%20%20break-before%3A%20always%3B%5Cn%20%20%20%20%20%20break-inside%3A%20avoid-column%3B%5Cn%20%20%20%20%20%20font-weight%3A%20700%3B%5Cn%5Cn%20%20%20%20%7D%5Cn%5Cn%20%20%20%20dd%20%7B%5Cn%20%20%20%20%20%20break-inside%3A%20avoid-column%3B%5Cn%20%20%20%20%20%20%2B%20dt%20%7B%5Cn%20%20%20%20%20%20%20%20margin-top%3A%201.33em%3B%5Cn%20%20%20%20%20%20%7D%5Cn%5Cn%20%20%20%20%20%20padding%3A%200%3B%5Cn%20%20%20%20%7D%5Cn%20%20%7D%5Cn%7D%40font%3AAdobe%20Clean%3B%22%2C%22.ornament-flex-rule(...)%20%7B%5Cn%20%20display%3A%20flex%3B%5Cn%20%20flex-flow%3A%20row%3B%5Cn%20%20text-align%3A%20center%3B%5Cn%5Cn%20%20%26%3Abefore%2C%20%26%3Aafter%20%7B%5Cn%20%20%20%20content%3A%20%5C%22%5C%22%3B%5Cn%20%20%20%20display%3A%20block%3B%5Cn%20%20%20%20flex-grow%3A%201%3B%5Cn%20%20%20%20flex-shrink%3A%201%3B%5Cn%20%20%20%20flex-basis%3A%20auto%3B%5Cn%20%20%20%20border-top%3A%20%40arguments%3B%5Cn%20%20%20%20transform%3A%20translateY(50%25)%3B%5Cn%20%20%20%20margin%3A%200%201ex%3B%5Cn%20%20%7D%5Cn%7D%22%5D%7D */
