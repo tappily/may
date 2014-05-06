@@ -115,12 +115,12 @@ header {
 
 }
 
-input[name=header-toggle] {
+#header-visible {
   position: fixed;
   top: 50vh;
   z-index: -1;
-}
 
-input[name=header-toggle]:checked + header {
-  z-index: 1;
+  &:checked + nav {
+    z-index: 1;
+  }
 }
