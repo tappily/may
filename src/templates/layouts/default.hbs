@@ -6,18 +6,20 @@
     <title>{{default title (sentence page.basename)}}</title>
     <meta name="description" content="{{default description site.description}}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    {{> styles}}
+    {{#block 'styles'}}{{{css 'default.css'}}}{{/block}}
+    <script type="text/javascript" src="//use.typekit.net/nck6uhj.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 </head>
 <body>
-<header>
-  {{> header }}
-</header>
-<main>
-  {{> body }}
-</main>
-<footer>
-  {{> footer}}
-</footer>
-{{> scripts}}
+{{#block 'header'}}
+    <header>{{> header}}</header>
+{{/block}}
+{{#block 'main'}}
+    <main>{{> body}}</main>
+{{/block}}
+{{#block 'footer'}}
+    <footer>{{> footer}}</footer>
+{{/block}}
+{{#block 'scripts'}}{{{js 'default.js'}}}{{/block}}
 </body>
 </html>

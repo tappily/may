@@ -1,0 +1,14 @@
+//defaults
+
+@wireframe: 0;
+
+//define
+.wireframe() when (@wireframe = 1) {
+  * {
+    background+:linear-gradient(to bottom, fade(orangered, 25%) 1px, transparent 1px);
+    background+:linear-gradient(to right, fade(orangered, 25%) 1px, transparent 1px);
+    background-size: 100% 1em, 1em 100%;
+  }
+}
+
+.wireframe();

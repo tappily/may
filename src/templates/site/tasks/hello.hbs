@@ -1,0 +1,27 @@
+<form>
+    <label for="i-0">Default</label>
+    <input id="i-0" type="text" placeholder="Text field" />
+    <label for="i-1">Required</label>
+    <input id="i-1" pattern="[A-Za-z]{2}" type="text" required placeholder="Two characters" />
+    <label for="i-disabled">Disabled</label>
+    <input id="i-disabled" type="text" disabled placeholder="Move along" />
+    <label for="i-read">Read only</label>
+    <input id="i-read" type="text" readonly value="Read me" />
+    <input id="i-2" name="checks" type="checkbox"><label for="i-2">Check</label>
+    <input id="i-3" checked name="radios" type="radio"><label for="i-3">Radio</label>
+    <input id="i-4" checked name="radios" type="radio"><label for="i-4">Radio</label>
+    <fieldset name="html5">
+        <label for="i-list">List</label>
+        <input id="i-list" type="text" list="seasons">
+        <datalist id="seasons">
+            <option value="Winter">
+            <option value="Spring">
+            <option value="Summer">
+            <option value="Fall">
+        </datalist>
+        <label for="i-out">Output</label><output id="i-out" for="seasons">Read me</output>
+    </fieldset>
+    <button type="button">Button</button>
+    <button type="reset">Reset</button>
+    <button type="submit">Submit</button>
+</form>

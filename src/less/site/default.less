@@ -1,0 +1,43 @@
+//imports
+@import "default/header";
+@import "default/footer";
+@import "default/regions";
+@import "default/offers";
+@import "default/offer";
+@import "default/tabs";
+@import "default/keyframes";
+@import "default/form";
+@import "default/task";
+
+//defaults
+@font: 'Helvetica Neue', sans-serif;
+@adobe-red: rgb(216, 30, 5);
+@adobe-gray: #999999;
+@adobe-promo-fill: royalblue;
+@adobe-darkgray: #333333;
+
+@header-fill: @adobe-darkgray;
+
+//define
+:root {
+  font-family: @font;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column;
+  justify-content: stretch;
+}
+
+main {
+  flex: 1;
+}
+
+//offers
+@offers-fill: @adobe-promo-fill;
+@offers-shade-fill: @adobe-darkgray;
+
+//tabs
+@tabs-fill: linear-gradient(0, @adobe-gray, silver);

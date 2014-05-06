@@ -1,0 +1,67 @@
+//defaults
+@offer-fill: royalblue;
+@offer-button-fill: contrast(@offer-fill);
+@offer-size: 1.2rem;
+@offer-leading: 1.15;
+@offer-shadow-fill: fade(contrast(contrast(@offer-fill)), 67%);
+@offer-tracking: 0.033ex;
+@offer-price-tracking: 0.067ex;
+@offer-button-tracking: @offer-price-tracking;
+
+//define
+.offer {
+  font-size: @offer-size;
+  font-weight: 200;
+  text-shadow: 0 0.067em 0 @offer-shadow-fill;
+  text-align: center;
+  padding: 2ex 2em;
+  background-color: @offer-fill;
+  color: contrast(@offer-fill);
+
+  p {
+    margin: 0;
+    line-height: @offer-leading;
+  }
+
+  .detail {
+    letter-spacing: @offer-tracking;
+  }
+
+  .detail, .price, .button {
+    display: inline-block;
+    vertical-align: baseline; //default. can remove this
+  }
+
+  .price {
+    font-size: 1.44em;
+    font-weight: 400;
+    letter-spacing: @offer-price-tracking;
+  }
+
+  .price, .button {
+    margin: 0.5ex;
+  }
+
+  :link,
+  :visited {
+    color: inherit;
+  }
+
+  .button {
+    font-weight: 400;
+    border: 0.1em solid;
+    border-radius: 0.67ex;
+    padding: .5ex .5em;
+    letter-spacing: @offer-button-tracking;
+
+    &:link {
+      text-decoration: none;
+    }
+    &:hover {
+      background-color: @offer-button-fill;
+      color: @offer-fill;
+      text-shadow: none;
+      box-shadow: 0 0 0.067em @offer-shadow-fill;
+    }
+  }
+}

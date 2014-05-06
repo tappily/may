@@ -1,0 +1,5 @@
+{{#extend 'default'}}
+  {{#content 'styles' mode='append'}}{{{css 'task.css'}}}{{/content}}
+  {{#content 'main'}}<main><form class="task" action="/task/">{{>
+  body}}</form></main>{{/content}}
+{{/extend}}

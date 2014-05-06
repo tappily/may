@@ -1,0 +1,131 @@
+//defaults
+@hero-line-length: 42rem;
+@hero-fill: gray;
+
+//define
+.hero {
+
+  &--super {
+    //max-height: 80vh;
+  }
+
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 2rem;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  flex: 1;
+
+  @media screen and (max-width: (@hero-line-length * 2)) {
+    flex-flow: column;
+  }
+
+  .image {
+    flex: 1 1 auto;
+    max-width: 100%;
+
+    background-image: none;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    &:after {
+      visibility: hidden;
+      content: none;
+    }
+  }
+
+  label {
+    flex: 1 0 auto;
+    font-size: 3em;
+    line-height: 0.85;
+    background-color: fade(@hero-fill, 50%);
+    color: white;
+    box-sizing: border-box;
+    display: flex;
+    flex: 1 0 auto;
+    justify-content: center;
+
+    padding: 0.1ex 0.1em;
+    margin-left: -1.2em;
+
+    @media screen and (max-width: (@hero-line-length * 2)) {
+      margin-left: 0;
+      margin-top: -1.1em;
+      flex-flow: column;
+    }
+
+    &:after {
+      align-self: center;
+      flex: 0 0 auto;
+      display: block;
+      content: "\25B6";
+      text-align: center;
+      border-radius: 0.25ex;
+      background-color: fade(black, 50%);
+      height: 1em;
+      width: 1em;
+      line-height: 0.88;
+    }
+  }
+
+  figcaption {
+    display: flex;
+    flex-flow: column;
+    padding: 2ex 2em;
+    box-sizing: border-box;
+    align-self: center;
+    margin: 0;
+    min-width: @hero-line-length;
+    max-width: (@hero-line-length * 1.5);
+
+    @media screen and (max-width: @hero-line-length) {
+      min-width: 0;
+    }
+
+    .title {
+      display: inline-block;
+      font-size: 2em;
+      line-height: 0.85;
+      font-weight: 200;
+      text-transform: uppercase;
+      margin: 0.033ex 0;
+      align-content: center;
+    }
+
+    .detail {
+      position: relative;
+      display: block;
+      font-size: 1em;
+      line-height: 1.12;
+      font-weight: 200;
+      margin: 0.5ex 0;
+    }
+
+    .button {
+      align-self: flex-end;
+      font-size: 0.67em;
+    }
+  }
+}
+
+.hero-figure(@i, @src, @fill:silver) {
+  #hero-@{i} {
+    background-color: @fill;
+    color: mix(contrast(@fill), @fill, 75%);
+    label {
+      background-color: fade(@fill, 50%);
+
+      &:after {
+        background-color: fade(mix(@fill, black, 33.33%), 50%);
+      }
+    }
+    .image {
+      background-image: url(@src);
+      &:after {
+        content: url(@src);
+      }
+    }
+  }
+}

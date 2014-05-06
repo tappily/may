@@ -1,0 +1,126 @@
+//defaults
+@header-fill: gray;
+@header-height: 3rem;
+@header-menu-width: 2.5em;
+@header-menu-end: 1.033 * @header-menu-width;
+
+//define
+header {
+  text-rendering: optimizelegibility;
+  font-size: 1rem;
+  line-height: @header-height;
+
+  nav, form {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav {
+    min-height: @header-height;
+    background-color: @header-fill;
+    color: contrast(@header-fill);
+    position: fixed;
+    z-index: 0;
+    width: 100%;
+    padding: 0;
+    font-weight: 200;
+    box-sizing: border-box;
+    padding-left: @header-menu-end;
+    font-size: 1.25em;
+
+    abbr[title] {
+      border-bottom-width: 0;
+      font-weight: 400;
+      font-size: 1.25em;
+      line-height: 1;
+    }
+
+    ol, li {
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      display: inline-block;
+      padding-left: 1.22em;
+    }
+
+    :link,
+    :visited,
+    :link:hover,
+    :visited:hover {
+      color: white;
+      text-decoration: none;
+    }
+  }
+
+  input[type=search] {
+    //box-shadow: inset 0 -0.05rem 0 0;
+    border: none;
+    background-color: transparent;
+    position: relative;
+
+    &:focus {
+      outline: none;
+      background-color: #666666;
+
+      &::-webkit-input-placeholder {
+        color: #333333;
+      }
+
+      &:-moz-placeholder {
+        color: #333333;
+      }
+
+      &::-moz-placeholder {
+        color: #333333;
+      }
+
+      &:-ms-input-placeholder {
+        color: #333333;
+      }
+    }
+  }
+
+  > menu {
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    color: contrast(#222);
+    background-color: #222;
+    min-height: @header-height;
+    font-size: 3em;
+
+
+    label {
+      display: inline-block;
+      position: relative;
+      padding: 0 0.25em;
+      cursor: context-menu;
+    }
+  }
+
+  + main {
+    background-color: white;
+    color: black;
+    top: @header-height;
+    position: relative;
+    overflow: auto;
+    margin-bottom: @header-height;
+  }
+
+}
+
+#header-visible {
+  position: fixed;
+  top: 50vh;
+  z-index: -1;
+
+  &:checked + nav {
+    z-index: 1;
+  }
+}

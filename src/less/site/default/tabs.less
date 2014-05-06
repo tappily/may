@@ -1,0 +1,169 @@
+//default
+@tabs-menu-fill: black;
+@tabs-fill: linear-gradient(0, gray, silver);
+@tabs-focus-fill: black;
+@tabs-color: contrast(black);
+@tabs-arrow-angle: 135deg;
+@tabs-menu-size: 1rem;
+@tabs-size: 2rem;
+@tabs-weight: 300;
+
+//define
+.tabs {
+  font-size: @tabs-size;
+  font-weight: @tabs-weight;
+  position: relative;
+  z-index: 0;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow: hidden;
+  background-image: @tabs-fill;
+
+  h2 {
+    margin: 1ex 1em;
+    font-weight: 200;
+  }
+
+  menu {
+    color: @tabs-menu-fill;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border-collapse: collapse;
+    font-size: @tabs-menu-size;
+
+    label {
+      border: 1em solid transparent;
+      flex: 1;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      position: relative;
+      box-sizing: border-box;
+      padding: 1ex 1em;
+      font-weight: 600;
+      color: @tabs-color;
+      z-index: 1;
+      text-align: center;
+    }
+  }
+
+
+
+  > input[type=radio] {
+    position: absolute;
+    bottom: 100%;
+    right: 150%;
+
+    .tab-input(1);
+    .tab-input(2);
+    .tab-input(3);
+    .tab-input(4);
+    .tab-input(5);
+    .tab-input(6);
+    .tab-input(7);
+    .tab-input(8);
+    .tab-input(9);
+    .tab-input(10);
+  }
+
+  > section {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    box-sizing: border-box;
+    padding: 0;
+    left: 100%;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .33s ease-in-out;
+    flex: 0 1 auto;
+    flex-flow: column;
+  }
+
+  &--bubble {
+
+    > input[type=radio] {
+
+      ~ menu label {
+
+        padding: 2ex 2em;
+        color: @tabs-menu-fill;
+        position: relative;
+        z-index: 1;
+
+
+        &:before {
+          content: "";
+          background-color: fade(contrast(@tabs-menu-fill), 50%);
+          border: 1px solid;
+          box-sizing: border-box;
+
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          display: block;
+          z-index: -1;
+          border-radius: .5em;
+        }
+
+        &:after {
+          content: "";
+          display: block;
+          position: absolute;
+          top: 100%;
+          left: 50%;
+          transform: translateX(-50%);
+
+          height: .67em;
+          width: 1em;
+          margin-top: -2px;
+
+          background-size: 50% 100%;
+          background-repeat: no-repeat;
+          background-position+: 100% 0;
+          background-position+: 0 0;
+        }
+      }
+    }
+  }
+}
+
+.tab-input(@i) {
+
+  &:nth-of-type(@{i}) {
+
+    &:focus {
+      ~ menu label:nth-of-type(@{i}) {
+        text-decoration: underline;
+      }
+    }
+
+    &:checked {
+
+      ~ menu label:nth-of-type(@{i}) {
+        overflow: visible;
+        color: @tabs-color;
+        &:before {
+          background-color: @tabs-focus-fill;
+        }
+
+        &:after {
+          @bg: @tabs-focus-fill 50%, @tabs-color 50%, @tabs-color 60%, transparent 60%;
+          background-image+: linear-gradient(@tabs-arrow-angle, @bg);
+          background-image+: linear-gradient((@tabs-arrow-angle * -1), @bg);
+        }
+      }
+
+      ~ section:nth-of-type(@{i}) {
+        left: 0;
+        position: relative;
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+}

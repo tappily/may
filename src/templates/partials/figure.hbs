@@ -1,0 +1,11 @@
+<figure id="{{id}}" class="hero">
+    <span class="image"></span>
+  {{#with video}}<label></label>{{/with}}
+  {{#with caption}}
+      <figcaption>
+        {{#with title}}<span class="title">{{.}}</span>{{/with}}
+        {{#with detail}}<span class="detail">{{.}}</span>{{/with}}
+        {{#with button}}<span class="button">{{.}}</span>{{/with}}
+      </figcaption>
+  {{/with}}
+</figure>

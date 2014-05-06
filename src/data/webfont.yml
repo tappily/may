@@ -1,10 +1,14 @@
-google:
-  host: fonts.googleapis.com
+typekit:
+  host: use.typekit.net
+  id: nck6uhj
   faces:
-    - family: Source Sans Pro
+    - family: Adobe Clean
       styles:
-        - weight: 200
-        - weight: 400
-        - weight: 700
-        - weight: 200
-          style: italic
+        - variation: light
+          weight: 300
+        - variation: regular
+          weight: 400
+        - variation: bold
+          weight: 700
+        - style: black
+          weight: 900
