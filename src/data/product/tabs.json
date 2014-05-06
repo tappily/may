@@ -1,0 +1,43 @@
+{
+  "header": {
+    "title": "What is"
+  },
+  "sections": [
+    {
+      "id": "hero-1",
+      "label": "What is love",
+      "caption": {
+        "title": "Tea-green leggings.",
+        "detail": "Dress skirt luxe playsuit knot ponytail. Minimal beauty vintage Lanvin neutral cami braid shoe mint Casio LA.",
+        "button": "Choupette leather minimal beauty"
+      }
+    },
+    {
+      "id": "hero-2",
+      "label": "baby don't hurt me",
+      "caption": {
+        "title": "Leather tote ecru dove grey minimal beauty knitwear.",
+        "detail": "Skinny jeans Saint Laurent fluffy sweater leather chignon washed out street style crop grunge.",
+        "button": "Choupette leather minimal beauty"
+      }
+    },
+    {
+      "id": "hero-3",
+      "label": "don't hurt me",
+      "caption": {
+        "title": "Washed out street style.",
+        "detail": "Luxe ecru Weekday parka beanie Acne rose gold Prada Saffiano button up crop fluffy sweater.",
+        "button": "Choupette leather minimal beauty"
+      }
+    },
+    {
+      "id": "hero-4",
+      "label": "no more",
+      "caption": {
+        "title": "Dove grey oversized clutch sunglasses relaxed dress.",
+        "detail": "Luggage button up ribbed shoe.",
+        "button": "Choupette leather minimal beauty"
+      }
+    }
+  ]
+}

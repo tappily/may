@@ -34,7 +34,7 @@ module.exports = function (grunt) {
       },
       products: {
         options: {
-          data: ['src/data/products/*.{yml,json}'],
+          data: ['src/data/product/*.{yml,json}'],
           layout: 'product.hbs'
         },
         src: ['src/templates/site/products/*.hbs'],
@@ -155,6 +155,10 @@ module.exports = function (grunt) {
       asset: {
         files: ['src/assets/**/*'],
         tasks: ['newer:copy:assets']
+      },
+      gruntfile: {
+        files: ['Gruntfile.js'],
+        tasks: ['site']
       },
       js: {
         files: ['src/js/**/*.js', './*.js'],

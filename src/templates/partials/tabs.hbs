@@ -1,56 +1,26 @@
 <div class="tabs tabs--bubble">
-    <input id="tab-2-1" type="radio" name="tabs2" checked>
-    <input id="tab-2-2" type="radio" name="tabs2">
-    <input id="tab-2-3" type="radio" name="tabs2">
-    <input id="tab-2-4" type="radio" name="tabs2">
-    <h2>What is</h2>
+  {{#each sections}}
+      <input id="{{id}}-visible"
+             type="radio"
+             name="tabs"{{#if @first}} checked{{/if}}>{{/each}}
+  {{#with header}}<h2>{{#with title}}{{.}}{{/with}}</h2>{{/with}}
     <menu>
-        <label for="tab-2-1">What is love</label>
-        <label for="tab-2-2">Baby don't hurt me</label>
-        <label for="tab-2-3">…baby don't hurt me</label>
-        <label for="tab-2-4">No more</label>
+      {{#each sections}}
+          <label for="{{id}}-visible">What is love</label>{{/each}}
     </menu>
-    <section>
-        <figure id="hero-1" class="hero">
-            <span class="image"></span>
-            <label></label>
-            <figcaption>
-                <span class="title">Tea-green leggings.</span>
-                <span class="detail">Dress skirt luxe playsuit knot ponytail. Minimal beauty vintage Lanvin neutral cami braid shoe mint Casio LA.</span>
-                <span class="button">Choupette leather minimal beauty.</span>
-            </figcaption>
-        </figure>
-    </section>
-    <section>
-        <figure id="hero-2" class="hero">
-            <span class="image"></span>
-            <label></label>
-            <figcaption>
-                <span class="title">Leather tote ecru dove grey minimal beauty knitwear.</span>
-                <span class="detail">Skinny jeans Saint Laurent fluffy sweater leather chignon washed out street style crop grunge.</span>
-                <span class="button">Choupette leather minimal beauty</span>
-            </figcaption>
-        </figure>
-    </section>
-    <section>
-        <figure id="hero-3" class="hero">
-            <span class="image"></span>
-            <label></label>
-            <figcaption>
-                <span class="title"> Washed out street style.</span>
-                <span class="detail">Luxe ecru Weekday parka beanie Acne rose gold Prada Saffiano button up crop fluffy sweater.</span>
-                <span class="button">Choupette leather minimal beauty</span>
-            </figcaption>
-        </figure>
-    </section>
-    <section>
-        <figure id="hero-4" class="hero">
-            <span class="image"></span>
-            <figcaption>
-                <span class="title"> Washed out street style.</span>
-                <span class="detail">Luxe ecru Weekday parka beanie Acne rose gold Prada Saffiano button up crop fluffy sweater.</span>
-                <span class="button">Choupette leather minimal beauty</span>
-            </figcaption>
-        </figure>
-    </section>
+  {{#each sections}}
+      <section>
+          <figure id="{{id}}" class="hero">
+              <span class="image"></span>
+              <label></label>
+            {{#with caption}}
+                <figcaption>
+                  {{#with title}}<span class="title">{{.}}</span>{{/with}}
+                  {{#with detail}}<span class="detail">{{.}}</span>{{/with}}
+                  {{#with button}}<span class="button">{{.}}</span>{{/with}}
+                </figcaption>
+            {{/with}}
+          </figure>
+      </section>
+  {{/each}}
 </div>
