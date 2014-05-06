@@ -10,7 +10,7 @@
   @spacing: 1em;
   @width: 15rem;
   @fill: @offers-fill;
-  @fill-shade:  mix(@offers-fill, @offers-shade-fill, 50%);
+  @fill-shade:  @offers-fill;
   @fill-light: white;
 
   @bg-fill: @fill;
@@ -23,7 +23,7 @@
   line-height: 1.5;
   text-align: center;
 
-  background-color: @bg-fill;
+  background-color: silver;
 
 
 
@@ -62,7 +62,7 @@
         text-shadow: 0 0.1em 0 @fill-shade;
         box-shadow: inset 0 0 0 0.1em;
         border: @spacing * 0.33 solid fade(@fill-shade, 50%);
-        //border-radius: 1.33ex;
+        border-radius: 1ex;
         margin: (@spacing * 0.5);
         background-color: @fill-shade;
         overflow: hidden;
@@ -80,6 +80,10 @@
       font-size: 2em;
       font-weight: 200;
       line-height: 1.13;
+    }
+
+    .price {
+      flex: 1;
     }
 
     button {
