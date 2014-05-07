@@ -2,7 +2,7 @@ typekit:
   host: use.typekit.net
   id: nck6uhj
   faces:
-    - family: Adobe Clean
+    - family: adobe-clean
       styles:
         - variation: light
           weight: 300

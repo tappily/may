@@ -17,6 +17,7 @@
   margin: 0;
   padding: 0;
   flex: 1;
+  overflow-x: hidden;
 
   @media screen and (max-width: (@hero-line-length * 2)) {
     flex-flow: column;
@@ -73,15 +74,17 @@
   figcaption {
     display: flex;
     flex-flow: column;
-    padding: 2ex 2em;
+    margin: 0;
     box-sizing: border-box;
     align-self: center;
-    margin: 0;
+    padding: 2ex 2em;
     min-width: @hero-line-length;
     max-width: (@hero-line-length * 1.5);
 
     @media screen and (max-width: @hero-line-length) {
+      padding: 1ex 1em;
       min-width: 0;
+      max-width: 100%;
       align-self: auto;
     }
 
