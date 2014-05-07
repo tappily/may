@@ -25,11 +25,13 @@
   .image {
     flex: 1 1 auto;
     max-width: 100%;
+    overflow: hidden;
 
     background-image: none;
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
+
     &:after {
       visibility: hidden;
       content: none;
@@ -44,7 +46,6 @@
     color: white;
     box-sizing: border-box;
     display: flex;
-    flex: 1 0 auto;
     justify-content: center;
 
     padding: 0.1ex 0.1em;
@@ -58,7 +59,6 @@
 
     &:after {
       align-self: center;
-      flex: 0 0 auto;
       display: block;
       content: "\25B6";
       text-align: center;
@@ -82,6 +82,7 @@
 
     @media screen and (max-width: @hero-line-length) {
       min-width: 0;
+      align-self: auto;
     }
 
     .title {
