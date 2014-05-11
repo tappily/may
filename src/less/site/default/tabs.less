@@ -1,12 +1,16 @@
 //default
 @tabs-menu-fill: black;
-@tabs-fill: linear-gradient(0, gray, silver);
+@tabs-fill: silver;
 @tabs-focus-fill: black;
 @tabs-color: contrast(black);
 @tabs-arrow-angle: 135deg;
-@tabs-menu-size: 1rem;
+@tabs-menu-size: 1.5rem;
+@tabs-menu-weight: 700;
+@tabs-menu-basis: 16rem;
+@tabs-count: 4;
 @tabs-size: 2rem;
 @tabs-weight: 300;
+@tabs-bevel-color: mix(@tabs-fill, white);
 
 //define
 .tabs {
@@ -18,7 +22,7 @@
   padding: 0;
   width: 100%;
   overflow: hidden;
-  background-image: @tabs-fill;
+  background-color: @tabs-fill;
 
   h2 {
     margin: 1ex 1em;
@@ -31,21 +35,25 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    border-collapse: collapse;
     font-size: @tabs-menu-size;
 
     label {
-      border: 1em solid transparent;
+      //border: 1em solid transparent;
       flex: 1;
       overflow: hidden;
       text-overflow: ellipsis;
       position: relative;
       box-sizing: border-box;
       padding: 1ex 1em;
-      font-weight: 600;
+      font-weight: @tabs-menu-weight;
       color: @tabs-color;
       z-index: 1;
       text-align: center;
+
+      @media only screen and (max-width: (@tabs-menu-basis * @tabs-count)) {
+        border-width: 0;
+      }
+
     }
   }
 
@@ -92,7 +100,8 @@
         color: @tabs-menu-fill;
         position: relative;
         z-index: 1;
-
+        border-bottom: 0.1em solid @tabs-bevel-color;
+        /*
 
         &:before {
           content: "";
@@ -110,6 +119,8 @@
           border-radius: .5em;
         }
 
+        */
+
         &:after {
           content: "";
           display: block;
@@ -120,12 +131,12 @@
 
           height: .67em;
           width: 1em;
-          margin-top: -2px;
+          margin-top: 0;
 
-          background-size: 50% 100%;
+          background-size: 0.5em 1em;
           background-repeat: no-repeat;
-          background-position+: 100% 0;
-          background-position+: 0 0;
+          background-position+: 100% 100%;
+          background-position+: 0 100%;
         }
       }
     }
@@ -147,12 +158,12 @@
       ~ menu label:nth-of-type(@{i}) {
         overflow: visible;
         color: @tabs-color;
+        text-shadow: 0 0.025em 0.1em fade(contrast(@tabs-color), 50%);
         &:before {
           background-color: @tabs-focus-fill;
         }
-
         &:after {
-          @bg: @tabs-focus-fill 50%, @tabs-color 50%, @tabs-color 60%, transparent 60%;
+          @bg: silver 50%, @tabs-bevel-color 50%, @tabs-bevel-color 60%, transparent 60%;
           background-image+: linear-gradient(@tabs-arrow-angle, @bg);
           background-image+: linear-gradient((@tabs-arrow-angle * -1), @bg);
         }
