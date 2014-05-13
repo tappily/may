@@ -185,9 +185,10 @@ module.exports = function (grunt) {
     this.data.forEach(function(l) {
       grunt.log.writeln('creating configuration for product', l);
 
-      var taskName = 'assemble.' + l;
+      var targetName = 'assemble.' + l,
+          taskName = 'assemble:' + l;
 
-      grunt.config.set(taskName, {
+      grunt.config.set(targetName, {
         options: {
           data: ['src/data/*.{yml,json}',
                 'src/data/product/*.{yml,json}',
@@ -198,7 +199,7 @@ module.exports = function (grunt) {
         dest: '<%= connect.site.options.base %>/products/' + l + '/'
       });
 
-      tasks.push(taskName.replace('.', ':'));
+      tasks.push(taskName);
     });
 
     grunt.task.run(tasks);

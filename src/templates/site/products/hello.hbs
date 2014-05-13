@@ -1,7 +1,8 @@
 Hello {{product/name}}
 {{> figure hero}}
 {{> offer}}
-{{#with figures}}<div class="tabs tabs--bubble">
+{{#with figures}}
+<div class="tabs tabs--bubble">
   {{#each sections}}
       <input id="{{id}}-visible"
              type="radio"
@@ -16,4 +17,5 @@ Hello {{product/name}}
         {{> figure .}}
       </section>
   {{/each}}
-</div>{{/with}}
+</div>
+{{/with}}
