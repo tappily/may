@@ -6,7 +6,7 @@
     <title>{{default title (sentence page.basename)}}</title>
     <meta name="description" content="{{default description site.description}}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    {{#block 'styles'}}{{{css 'default.css'}}}{{/block}}
+    {{#block 'styles'}}{{#with styles}}{{{css .}}}{{/with}}{{/block}}
     <script type="text/javascript" src="//use.typekit.net/nck6uhj.js"></script>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 </head>
@@ -20,6 +20,6 @@
 {{#block 'footer'}}
     <footer>{{> footer}}</footer>
 {{/block}}
-{{#block 'scripts'}}{{{js 'default.js'}}}{{/block}}
+{{#block 'scripts'}}{{#with scripts}}{{{js .}}}{{/with}}{{/block}}
 </body>
 </html>

@@ -10,7 +10,7 @@ module.exports = function (grunt) {
     webfont: grunt.file.readYAML('src/data/webfont.yml'),
     pkg: grunt.file.readJSON('package.json'),
     'assemble-products': {
-      targets: ['ai', 'ps']
+      targets: ['ai', 'ps', 'foo']
     },
     assemble: {
       options: {
@@ -177,6 +177,32 @@ module.exports = function (grunt) {
         tasks: ['assemble']
       }
     }
+  });
+
+  grunt.task.registerMultiTask('assemble-products', 'Multi assembly', function() {
+    var tasks = [];
+
+    this.data.forEach(function(l) {
+      grunt.log.writeln('creating configuration for product', l);
+
+      var targetName = 'assemble.' + l,
+          taskName = 'assemble:' + l;
+
+      grunt.config.set(targetName, {
+        options: {
+          data: ['src/data/*.{yml,json}',
+                'src/data/product/*.{yml,json}',
+                'src/data/product/'+ l + '/*.{yml,json}'],
+          layout: 'product.hbs'
+        },
+        src: 'src/templates/site/products/*.hbs',
+        dest: '<%= connect.site.options.base %>/products/' + l + '/'
+      });
+
+      tasks.push(taskName);
+    });
+
+    grunt.task.run(tasks);
   });
 
   grunt.task.registerTask('default', [ 'test' ]);

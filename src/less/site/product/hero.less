@@ -17,6 +17,7 @@
   margin: 0;
   padding: 0;
   flex: 1;
+  overflow-x: hidden;
 
   @media screen and (max-width: (@hero-line-length * 2)) {
     flex-flow: column;
@@ -25,11 +26,13 @@
   .image {
     flex: 1 1 auto;
     max-width: 100%;
+    overflow: hidden;
 
     background-image: none;
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
+
     &:after {
       visibility: hidden;
       content: none;
@@ -44,7 +47,6 @@
     color: white;
     box-sizing: border-box;
     display: flex;
-    flex: 1 0 auto;
     justify-content: center;
 
     padding: 0.1ex 0.1em;
@@ -58,7 +60,6 @@
 
     &:after {
       align-self: center;
-      flex: 0 0 auto;
       display: block;
       content: "\25B6";
       text-align: center;
@@ -73,15 +74,18 @@
   figcaption {
     display: flex;
     flex-flow: column;
-    padding: 2ex 2em;
+    margin: 0;
     box-sizing: border-box;
     align-self: center;
-    margin: 0;
+    padding: 2ex 2em;
     min-width: @hero-line-length;
     max-width: (@hero-line-length * 1.5);
 
     @media screen and (max-width: @hero-line-length) {
+      padding: 1ex 1em;
       min-width: 0;
+      max-width: 100%;
+      align-self: auto;
     }
 
     .title {
