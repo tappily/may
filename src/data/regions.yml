@@ -1,0 +1,206 @@
+- title: North America
+  items:
+  - lang: en
+    code: ca
+    label: Canada - English
+  - lang: fr
+    code: ca_fr
+    label: Canada - Français
+  - lang: es
+    code: la
+    label: Latinoamérica
+  - lang: es
+    code: mx
+    label: México
+  - lang: en
+    code: us
+    label: United States
+- title: South America
+  items:
+    - lang: pt
+      code: br
+      label: Brasil
+- title: Europe, Middle East and Africa
+  items:
+    - lang: en
+      code: africa
+      label: Africa - English
+    - lang: de
+      code: at
+      label: Österreich - Deutsch
+    - lang: en
+      code: be_en
+      label: Belgium - English
+    - lang: fr
+      code: be_fr
+      label: Belgique - Français
+    - lang: nl
+      code: be_nl
+      label: België - Nederlands
+    - lang: bg
+      code: bg
+      label: България
+    - lang: hr
+      code: hr
+      label: Hrvatska
+    - lang: en
+      code: eeurope
+      label: Cyprus - English
+    - lang: cs
+      code: cz
+      label: Česká republika
+    - lang: da
+      code: dk
+      label: Danmark
+    - lang: en
+      code: eeurope
+      label: Eastern Europe - English
+    - lang: et
+      code: ee
+      label: Eesti
+    - lang: fi
+      code: fi
+      label: Suomi
+    - lang: fr
+      code: fr
+      label: France
+    - lang: de
+      code: de
+      label: Deutschland
+    - lang: en
+      code: eeurope
+      label: Greece - English
+    - lang: hu
+      code: hu
+      label: Magyarország
+    - lang: en
+      code: ie
+      label: Ireland
+    - lang: en
+      code: il_en
+      label: Israel - English
+    - lang: he
+      code: il_he
+      label: ישראל - עברית
+    - lang: it
+      code: it
+      label: Italia
+    - lang: lv
+      code: lv
+      label: Latvija
+    - lang: lt
+      code: lt
+      label: Lietuva
+    - lang: de
+      code: lu_de
+      label: Luxembourg - Deutsch
+    - lang: en
+      code: lu_en
+      label: Luxembourg - English
+    - lang: fr
+      code: lu_fr
+      label: Luxembourg - Français
+    - lang: en
+      code: eeurope
+      label: Malta - English
+    - lang: ar
+      code: mena_ar
+      label: الشرق الأوسط وشمال أفريقيا - اللغة
+                  العربية
+    - lang: en
+      code: mena_en
+      label: Middle East and North Africa - English
+    - lang: fr
+      code: mena_fr
+      label: Moyen-Orient et Afrique du Nord - Français
+    - lang: nl
+      code: nl
+      label: Nederland
+    - lang: no
+      code: no
+      label: Norge
+    - lang: pl
+      code: pl
+      label: Polska
+    - lang: pt
+      code: pt
+      label: Portugal
+    - lang: ro
+      code: ro
+      label: România
+    - lang: ru
+      code: ru
+      label: Россия
+    - lang: sr
+      code: rs
+      label: Srbija
+    - lang: sk
+      code: sk
+      label: Slovensko
+    - lang: sl
+      code: si
+      label: Slovenija
+    - lang: es
+      code: es
+      label: España
+    - lang: sv
+      code: se
+      label: Sverige
+    - lang: de
+      code: ch_de
+      label: Schweiz - Deutsch
+    - lang: fr
+      code: ch_fr
+      label: Suisse - Français
+    - lang: it
+      code: ch_it
+      label: Svizzera - Italiano
+    - lang: tr
+      code: tr
+      label: Türkiye
+    - lang: uk
+      code: ua
+      label: Україна
+    - lang: en
+      code: uk
+      label: United Kingdom
+- title: Asia Pacific
+  items:
+    - lang: en
+      code: au
+      label: Australia
+    - lang: zh
+      code: cn
+      label: 中国
+    - lang: zh
+      code: hk_zh
+      label: 中國香港特別行政區
+    - lang: en
+      code: hk_en
+      label: Hong Kong S.A.R. of China
+    - lang: en
+      code: in
+      label: India - English
+    - lang: ja
+      code: jp
+      label: 日本
+    - lang: ko
+      code: kr
+      label: 한국
+    - lang: en
+      code: nz
+      label: New Zealand
+    - lang: zh
+      code: tw
+      label: 台灣
+- title: Southeast Asia
+  items:
+    - lang: en
+      code: sea
+      label: 'Includes Indonesia, Malaysia, Philippines, Singapore, Thailand,
+        and Vietnam - English'
+- title: Commonwealth of Independent States
+  items:
+    - code: cis
+      label: 'Includes Armenia, Azerbaijan, Belarus, Georgia, Kazakhstan,
+        Kyrgyzstan, Tajikistan, Turkmenistan, Ukraine, Uzbekistan'
