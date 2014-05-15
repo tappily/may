@@ -10,27 +10,145 @@
     <title>Index</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="assets/css/default.css">
-    <link rel="stylesheet" href="assets/css/index.css">
-  
-    <script type="text/javascript" src="//use.typekit.net/nck6uhj.js"></script>
-    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    
+    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
 </head>
 <body>
-<header><input type="checkbox" name="header-visible" id="header-visible">
+<header>
+  <input type="checkbox" name="header-toggle" id="header-toggle">
 <nav>
     <ol>
         <li><abbr class="brand--ps" title="Photoshop">Ps</abbr></li>
         <li>Overview</li>
         <li><a href="#">Features</a></li>
+        <!--
+        <li><a href="#">Route</a></li>
+        <li><input list="near-results" type="search" placeholder="Search Route">
+          <datalist id="near-results">
+            <option>Route / 1</option>
+            <option>Route / 2</option>
+            <option>Route / 3</option>
+            <option>Route / 4</option>
+            <option>Route / 5</option>
+          </datalist>
+        </li>
+        -->
     </ol>
 </nav>
 <menu>
-    <label for="header-visible">&#9708;</label>
-</menu></header>
-<main>hello index
+    <label for="header-toggle">&#9708;</label>
+</menu>
+</header>
+<main>
+  <figure id="hero-0" class="hero hero--super context">
+    <span class="image"></span>
+    <label></label>
+    <figcaption>
+        <span class="title">Tea-green leggings.</span>
+        <span class="detail">Dress skirt luxe playsuit knot ponytail. Minimal beauty vintage Lanvin neutral cami braid shoe mint Casio LA.</span>
+        <span class="button">Choupette leather minimal beauty.</span>
+    </figcaption>
+</figure>
+<section class="offer">
+    <p>
+        <span class="detail">The leader of the new school, uncool. Never played the fool, just made the rules in</span>
+      <span class="price">
+        <span class="currency">$</span><span class="rates">19.88</span><span class="term">/yr.</span>
+      </span>
+        <a class="button" href="#">Don't believe</a>
+    </p>
+</section>
+<div class="tabs tabs--bubble">
+    <input id="tab-2-1" type="radio" name="tabs2" checked>
+    <input id="tab-2-2" type="radio" name="tabs2">
+    <input id="tab-2-3" type="radio" name="tabs2">
+    <input id="tab-2-4" type="radio" name="tabs2">
+    <h2>What is</h2>
+    <menu>
+        <label for="tab-2-1">What is love</label>
+        <label for="tab-2-2">Baby don't hurt me</label>
+        <label for="tab-2-3">…baby don't hurt me</label>
+        <label for="tab-2-4">No more</label>
+    </menu>
+    <section>
+        <figure id="hero-1" class="hero">
+            <span class="image"></span>
+            <label></label>
+            <figcaption>
+                <span class="title">Tea-green leggings.</span>
+                <span class="detail">Dress skirt luxe playsuit knot ponytail. Minimal beauty vintage Lanvin neutral cami braid shoe mint Casio LA.</span>
+                <span class="button">Choupette leather minimal beauty.</span>
+            </figcaption>
+        </figure>
+    </section>
+    <section>
+        <figure id="hero-2" class="hero">
+            <span class="image"></span>
+            <label></label>
+            <figcaption>
+                <span class="title">Leather tote ecru dove grey minimal beauty knitwear.</span>
+                <span class="detail">Skinny jeans Saint Laurent fluffy sweater leather chignon washed out street style crop grunge.</span>
+                <span class="button">Choupette leather minimal beauty</span>
+            </figcaption>
+        </figure>
+    </section>
+    <section>
+        <figure id="hero-3" class="hero">
+            <span class="image"></span>
+            <label></label>
+            <figcaption>
+                <span class="title"> Washed out street style.</span>
+                <span class="detail">Luxe ecru Weekday parka beanie Acne rose gold Prada Saffiano button up crop fluffy sweater.</span>
+                <span class="button">Choupette leather minimal beauty</span>
+            </figcaption>
+        </figure>
+    </section>
+    <section>
+        <figure id="hero-4" class="hero">
+            <span class="image"></span>
+            <figcaption>
+                <span class="title"> Washed out street style.</span>
+                <span class="detail">Luxe ecru Weekday parka beanie Acne rose gold Prada Saffiano button up crop fluffy sweater.</span>
+                <span class="button">Choupette leather minimal beauty</span>
+            </figcaption>
+        </figure>
+    </section>
+</div>
+<section class="offers">
+    <ul>
+        <li class="offer">
+            <h2>Descended from the shores of the cosmic ocean!</h2>
+        <span class="price">
+          <span class="currency">$</span><span class="rates">19.88</span><span class="term">/yr.</span>
+        </span>
+            <button>Button</button>
+        </li>
+        <li class="offer">
+            <h2>Cosmic ocean circumnavigated, science, network of wormholes.</h2>
+        <span class="price">
+          <span class="currency">$</span><span class="rates">19.88</span><span class="term">/yr.</span>
+        </span>
+            <button>Button</button>
+        </li>
+        <li class="group">
+            <ul>
+                <li class="offer">
+                    <p>Flatland brain is the seed of intelligence, prime number tendrils of gossamer clouds.</p>
+                    <button>Button</button>
+                </li>
+                <li class="offer">
+                    <p>A billion trillion finite but unbounded the carbon in our apple pies dream of the mind's eye?</p>
+                    <button>Button</button>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</section>
+
 </main>
-<footer><input id="regions-visible" type="checkbox"/>
+<footer>
+  <input id="regions-visible" type="checkbox"/>
 <label for="regions-visible">&#10084; Choose a local site</label>
 <form class="regions" action=".">
     <label for="regions-visible">Adobe sites around the world</label>
@@ -111,9 +229,8 @@
         <dd><a href="/cis/">Includes Armenia, Azerbaijan, Belarus, Georgia, Kazakhstan, Kyrgyzstan, Tajikistan,  Turkmenistan, Ukraine, Uzbekistan</a></dd>
     </dl>
 </form>
+
 </footer>
-<script src="assets/js/default.js"></script>
-    <script src="assets/js/index.js"></script>
-  
+
 </body>
 </html>
