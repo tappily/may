@@ -1,0 +1,17 @@
+@keyframes delay-vis {
+  0% {
+    visibility: visible;
+  }
+  99% {
+    visibility: visible;
+  }
+}
+@keyframes delay-vis-2 {
+  0% {
+    visibility: visible;
+  }
+  99% {
+    visibility: visible;
+  }
+}
+/*# sourceMappingURL=data:application/json,%7B%22version%22%3A3%2C%22sources%22%3A%5B%22src%2Fless%2Fsite%2Fdefault%2Fkeyframes.less%22%5D%2C%22names%22%3A%5B%5D%2C%22mappings%22%3A%22AAMA%3BEACE%3BIAAK%2CmBAAA%3B%3BEACL%3BIAAM%2CmBAAA%3B%3B%3BAAGR%3BEACE%3BIAAK%2CmBAAA%3B%3BEACL%3BIAAM%2CmBAAA%22%2C%22sourcesContent%22%3A%5B%22%2F%2Fimports%5Cn%5Cn%2F%2Fdefaults%5Cn%5Cn%2F%2Fdefine%5Cn%5Cn%40keyframes%20delay-vis%20%7B%5Cn%20%200%25%20%7B%20visibility%3A%20visible%3B%20%7D%5Cn%20%2099%25%20%7B%20visibility%3A%20visible%3B%20%7D%5Cn%7D%5Cn%5Cn%40keyframes%20delay-vis-2%20%7B%5Cn%20%200%25%20%7B%20visibility%3A%20visible%3B%20%7D%5Cn%20%2099%25%20%7B%20visibility%3A%20visible%3B%20%7D%5Cn%7D%40font%3Aadobe-clean%3B%22%5D%7D */

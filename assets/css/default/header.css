@@ -1,0 +1,102 @@
+header {
+  text-rendering: optimizelegibility;
+  font-size: 1rem;
+  line-height: 3rem;
+}
+header nav,
+header form {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+header nav {
+  min-height: 3rem;
+  background-color: #808080;
+  color: #ffffff;
+  position: fixed;
+  z-index: 0;
+  width: 100%;
+  padding: 0;
+  font-weight: 200;
+  box-sizing: border-box;
+  padding-left: 2.5825em;
+  font-size: 1.25em;
+}
+header nav abbr[title] {
+  border-bottom-width: 0;
+  font-weight: 400;
+  font-size: 1.25em;
+  line-height: 1;
+}
+header nav ol,
+header nav li {
+  margin: 0;
+  padding: 0;
+}
+header nav li {
+  display: inline-block;
+  padding-left: 1.22em;
+}
+header nav :link,
+header nav :visited,
+header nav :link:hover,
+header nav :visited:hover {
+  color: white;
+  text-decoration: none;
+}
+header input[type=search] {
+  border: none;
+  background-color: transparent;
+  position: relative;
+}
+header input[type=search]:focus {
+  outline: none;
+  background-color: #666666;
+}
+header input[type=search]:focus::-webkit-input-placeholder {
+  color: #333333;
+}
+header input[type=search]:focus:-moz-placeholder {
+  color: #333333;
+}
+header input[type=search]:focus::-moz-placeholder {
+  color: #333333;
+}
+header input[type=search]:focus:-ms-input-placeholder {
+  color: #333333;
+}
+header > menu {
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  color: #ffffff;
+  background-color: #222;
+  min-height: 3rem;
+  font-size: 3em;
+}
+header > menu label {
+  display: inline-block;
+  position: relative;
+  padding: 0 0.25em;
+  cursor: context-menu;
+}
+header + main {
+  background-color: white;
+  color: black;
+  top: 3rem;
+  position: relative;
+  overflow: auto;
+  margin-bottom: 3rem;
+}
+#header-visible {
+  position: fixed;
+  top: 50vh;
+  z-index: -1;
+}
+#header-visible:checked + nav {
+  z-index: 1;
+}
+/*# sourceMappingURL=data:application/json,%7B%22version%22%3A3%2C%22sources%22%3A%5B%22src%2Fless%2Fsite%2Fdefault%2Fheader.less%22%5D%2C%22names%22%3A%5B%5D%2C%22mappings%22%3A%22AAOA%3BEACE%2CkCAAA%3BEACA%2CeAAA%3BEACA%2CiBAAA%3B%3BAAHF%2CMAKE%3BAALF%2CMAKO%3BEACH%2CqBAAA%3BEACA%2CSAAA%3BEACA%2CUAAA%3B%3BAARJ%2CMAWE%3BEACE%2CgBAAA%3BEACA%2CyBAAA%3BEACA%2CcAAA%3BEACA%2CeAAA%3BEACA%2CUAAA%3BEACA%2CWAAA%3BEACA%2CUAAA%3BEACA%2CgBAAA%3BEACA%2CsBAAA%3BEACA%2CsBAAA%3BEACA%2CiBAAA%3B%3BAAtBJ%2CMAWE%2CIAaE%2CKAAI%3BEACF%2CsBAAA%3BEACA%2CgBAAA%3BEACA%2CiBAAA%3BEACA%2CcAAA%3B%3BAA5BN%2CMAWE%2CIAoBE%3BAA%2FBJ%2CMAWE%2CIAoBM%3BEACF%2CSAAA%3BEACA%2CUAAA%3B%3BAAjCN%2CMAWE%2CIAyBE%3BEACE%2CqBAAA%3BEACA%2CoBAAA%3B%3BAAtCN%2CMAWE%2CIA8BE%3BAAzCJ%2CMAWE%2CIA%2BBE%3BAA1CJ%2CMAWE%2CIAgCE%2CMAAK%3BAA3CT%2CMAWE%2CIAiCE%2CSAAQ%3BEACN%2CYAAA%3BEACA%2CqBAAA%3B%3BAA9CN%2CMAkDE%2CMAAK%3BEAEH%2CYAAA%3BEACA%2C6BAAA%3BEACA%2CkBAAA%3B%3BAAEA%2CMANF%2CMAAK%2CaAMF%3BEACC%2CaAAA%3BEACA%2CyBAAA%3B%3BAAEA%2CMAVJ%2CMAAK%2CaAMF%2CMAIE%3BEACC%2CcAAA%3B%3BAAGF%2CMAdJ%2CMAAK%2CaAMF%2CMAQE%3BEACC%2CcAAA%3B%3BAAGF%2CMAlBJ%2CMAAK%2CaAMF%2CMAYE%3BEACC%2CcAAA%3B%3BAAGF%2CMAtBJ%2CMAAK%2CaAMF%2CMAgBE%3BEACC%2CcAAA%3B%3BAAzER%2CMA8EE%3BEACE%2CSAAA%3BEACA%2CUAAA%3BEACA%2CeAAA%3BEACA%2CUAAA%3BEACA%2CMAAA%3BEACA%2COAAA%3BEACA%2CcAAA%3BEACA%2CsBAAA%3BEACA%2CgBAAA%3BEACA%2CcAAA%3B%3BAAxFJ%2CMA8EE%2COAaE%3BEACE%2CqBAAA%3BEACA%2CkBAAA%3BEACA%2CiBAAA%3BEACA%2CoBAAA%3B%3BAA%2FFN%2CMAmGE%3BEACE%2CuBAAA%3BEACA%2CYAAA%3BEACA%2CSAAA%3BEACA%2CkBAAA%3BEACA%2CcAAA%3BEACA%2CmBAAA%3B%3BAAKJ%3BEACE%2CeAAA%3BEACA%2CSAAA%3BEACA%2CWAAA%3B%3BAAEA%2CeAAC%2CQAAS%3BEACR%2CUAAA%22%2C%22sourcesContent%22%3A%5B%22%2F%2Fdefaults%5Cn%40header-fill%3A%20gray%3B%5Cn%40header-height%3A%203rem%3B%5Cn%40header-menu-width%3A%202.5em%3B%5Cn%40header-menu-end%3A%201.033%20*%20%40header-menu-width%3B%5Cn%5Cn%2F%2Fdefine%5Cnheader%20%7B%5Cn%20%20text-rendering%3A%20optimizelegibility%3B%5Cn%20%20font-size%3A%201rem%3B%5Cn%20%20line-height%3A%20%40header-height%3B%5Cn%5Cn%20%20nav%2C%20form%20%7B%5Cn%20%20%20%20display%3A%20inline-block%3B%5Cn%20%20%20%20margin%3A%200%3B%5Cn%20%20%20%20padding%3A%200%3B%5Cn%20%20%7D%5Cn%5Cn%20%20nav%20%7B%5Cn%20%20%20%20min-height%3A%20%40header-height%3B%5Cn%20%20%20%20background-color%3A%20%40header-fill%3B%5Cn%20%20%20%20color%3A%20contrast(%40header-fill)%3B%5Cn%20%20%20%20position%3A%20fixed%3B%5Cn%20%20%20%20z-index%3A%200%3B%5Cn%20%20%20%20width%3A%20100%25%3B%5Cn%20%20%20%20padding%3A%200%3B%5Cn%20%20%20%20font-weight%3A%20200%3B%5Cn%20%20%20%20box-sizing%3A%20border-box%3B%5Cn%20%20%20%20padding-left%3A%20%40header-menu-end%3B%5Cn%20%20%20%20font-size%3A%201.25em%3B%5Cn%5Cn%20%20%20%20abbr%5Btitle%5D%20%7B%5Cn%20%20%20%20%20%20border-bottom-width%3A%200%3B%5Cn%20%20%20%20%20%20font-weight%3A%20400%3B%5Cn%20%20%20%20%20%20font-size%3A%201.25em%3B%5Cn%20%20%20%20%20%20line-height%3A%201%3B%5Cn%20%20%20%20%7D%5Cn%5Cn%20%20%20%20ol%2C%20li%20%7B%5Cn%20%20%20%20%20%20margin%3A%200%3B%5Cn%20%20%20%20%20%20padding%3A%200%3B%5Cn%20%20%20%20%7D%5Cn%5Cn%20%20%20%20li%20%7B%5Cn%20%20%20%20%20%20display%3A%20inline-block%3B%5Cn%20%20%20%20%20%20padding-left%3A%201.22em%3B%5Cn%20%20%20%20%7D%5Cn%5Cn%20%20%20%20%3Alink%2C%5Cn%20%20%20%20%3Avisited%2C%5Cn%20%20%20%20%3Alink%3Ahover%2C%5Cn%20%20%20%20%3Avisited%3Ahover%20%7B%5Cn%20%20%20%20%20%20color%3A%20white%3B%5Cn%20%20%20%20%20%20text-decoration%3A%20none%3B%5Cn%20%20%20%20%7D%5Cn%20%20%7D%5Cn%5Cn%20%20input%5Btype%3Dsearch%5D%20%7B%5Cn%20%20%20%20%2F%2Fbox-shadow%3A%20inset%200%20-0.05rem%200%200%3B%5Cn%20%20%20%20border%3A%20none%3B%5Cn%20%20%20%20background-color%3A%20transparent%3B%5Cn%20%20%20%20position%3A%20relative%3B%5Cn%5Cn%20%20%20%20%26%3Afocus%20%7B%5Cn%20%20%20%20%20%20outline%3A%20none%3B%5Cn%20%20%20%20%20%20background-color%3A%20%23666666%3B%5Cn%5Cn%20%20%20%20%20%20%26%3A%3A-webkit-input-placeholder%20%7B%5Cn%20%20%20%20%20%20%20%20color%3A%20%23333333%3B%5Cn%20%20%20%20%20%20%7D%5Cn%5Cn%20%20%20%20%20%20%26%3A-moz-placeholder%20%7B%5Cn%20%20%20%20%20%20%20%20color%3A%20%23333333%3B%5Cn%20%20%20%20%20%20%7D%5Cn%5Cn%20%20%20%20%20%20%26%3A%3A-moz-placeholder%20%7B%5Cn%20%20%20%20%20%20%20%20color%3A%20%23333333%3B%5Cn%20%20%20%20%20%20%7D%5Cn%5Cn%20%20%20%20%20%20%26%3A-ms-input-placeholder%20%7B%5Cn%20%20%20%20%20%20%20%20color%3A%20%23333333%3B%5Cn%20%20%20%20%20%20%7D%5Cn%20%20%20%20%7D%5Cn%20%20%7D%5Cn%5Cn%20%20%3E%20menu%20%7B%5Cn%20%20%20%20margin%3A%200%3B%5Cn%20%20%20%20padding%3A%200%3B%5Cn%20%20%20%20position%3A%20fixed%3B%5Cn%20%20%20%20z-index%3A%201%3B%5Cn%20%20%20%20top%3A%200%3B%5Cn%20%20%20%20left%3A%200%3B%5Cn%20%20%20%20color%3A%20contrast(%23222)%3B%5Cn%20%20%20%20background-color%3A%20%23222%3B%5Cn%20%20%20%20min-height%3A%20%40header-height%3B%5Cn%20%20%20%20font-size%3A%203em%3B%5Cn%5Cn%5Cn%20%20%20%20label%20%7B%5Cn%20%20%20%20%20%20display%3A%20inline-block%3B%5Cn%20%20%20%20%20%20position%3A%20relative%3B%5Cn%20%20%20%20%20%20padding%3A%200%200.25em%3B%5Cn%20%20%20%20%20%20cursor%3A%20context-menu%3B%5Cn%20%20%20%20%7D%5Cn%20%20%7D%5Cn%5Cn%20%20%2B%20main%20%7B%5Cn%20%20%20%20background-color%3A%20white%3B%5Cn%20%20%20%20color%3A%20black%3B%5Cn%20%20%20%20top%3A%20%40header-height%3B%5Cn%20%20%20%20position%3A%20relative%3B%5Cn%20%20%20%20overflow%3A%20auto%3B%5Cn%20%20%20%20margin-bottom%3A%20%40header-height%3B%5Cn%20%20%7D%5Cn%5Cn%7D%5Cn%5Cn%23header-visible%20%7B%5Cn%20%20position%3A%20fixed%3B%5Cn%20%20top%3A%2050vh%3B%5Cn%20%20z-index%3A%20-1%3B%5Cn%5Cn%20%20%26%3Achecked%20%2B%20nav%20%7B%5Cn%20%20%20%20z-index%3A%201%3B%5Cn%20%20%7D%5Cn%7D%40font%3Aadobe-clean%3B%22%5D%7D */

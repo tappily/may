@@ -1,0 +1,52 @@
+.offer {
+  font-size: 1.2rem;
+  font-weight: 200;
+  text-shadow: 0 0.067em 0 rgba(0, 0, 0, 0.67);
+  text-align: center;
+  padding: 2ex 2em;
+  background-color: #4169e1;
+  color: #ffffff;
+}
+.offer p {
+  margin: 0;
+  line-height: 1.15;
+}
+.offer .detail {
+  letter-spacing: 0.033ex;
+}
+.offer .detail,
+.offer .price,
+.offer .button {
+  display: inline-block;
+  vertical-align: baseline;
+}
+.offer .price {
+  font-size: 1.44em;
+  font-weight: 400;
+  letter-spacing: 0.067ex;
+}
+.offer .price,
+.offer .button {
+  margin: 0.5ex;
+}
+.offer :link,
+.offer :visited {
+  color: inherit;
+}
+.offer .button {
+  font-weight: 400;
+  border: 0.1em solid;
+  border-radius: 0.67ex;
+  padding: .5ex .5em;
+  letter-spacing: 0.067ex;
+}
+.offer .button:link {
+  text-decoration: none;
+}
+.offer .button:hover {
+  background-color: #ffffff;
+  color: #4169e1;
+  text-shadow: none;
+  box-shadow: 0 0 0.067em rgba(0, 0, 0, 0.67);
+}
+/*# sourceMappingURL=data:application/json,%7B%22version%22%3A3%2C%22sources%22%3A%5B%22src%2Fless%2Fsite%2Fdefault%2Foffer.less%22%5D%2C%22names%22%3A%5B%5D%2C%22mappings%22%3A%22AAWA%3BEACE%2CiBAAA%3BEACA%2CgBAAA%3BEACA%2C4CAAA%3BEACA%2CkBAAA%3BEACA%2CgBAAA%3BEACA%2CyBAAA%3BEACA%2CcAAA%3B%3BAAPF%2CMASE%3BEACE%2CSAAA%3BEACA%2CiBAAA%3B%3BAAXJ%2CMAcE%3BEACE%2CuBAAA%3B%3BAAfJ%2CMAkBE%3BAAlBF%2CMAkBW%3BAAlBX%2CMAkBmB%3BEACf%2CqBAAA%3BEACA%2CwBAAA%3B%3BAApBJ%2CMAuBE%3BEACE%2CiBAAA%3BEACA%2CgBAAA%3BEACA%2CuBAAA%3B%3BAA1BJ%2CMA6BE%3BAA7BF%2CMA6BU%3BEACN%2CaAAA%3B%3BAA9BJ%2CMAiCE%3BAAjCF%2CMAkCE%3BEACE%2CcAAA%3B%3BAAnCJ%2CMAsCE%3BEACE%2CgBAAA%3BEACA%2CmBAAA%3BEACA%2CqBAAA%3BEACA%2CkBAAA%3BEACA%2CuBAAA%3B%3BAAEA%2CMAPF%2CQAOG%3BEACC%2CqBAAA%3B%3BAAEF%2CMAVF%2CQAUG%3BEACC%2CyBAAA%3BEACA%2CcAAA%3BEACA%2CiBAAA%3BEACA%2C2CAAA%22%2C%22sourcesContent%22%3A%5B%22%2F%2Fdefaults%5Cn%40offer-fill%3A%20royalblue%3B%5Cn%40offer-button-fill%3A%20contrast(%40offer-fill)%3B%5Cn%40offer-size%3A%201.2rem%3B%5Cn%40offer-leading%3A%201.15%3B%5Cn%40offer-shadow-fill%3A%20fade(contrast(contrast(%40offer-fill))%2C%2067%25)%3B%5Cn%40offer-tracking%3A%200.033ex%3B%5Cn%40offer-price-tracking%3A%200.067ex%3B%5Cn%40offer-button-tracking%3A%20%40offer-price-tracking%3B%5Cn%5Cn%2F%2Fdefine%5Cn.offer%20%7B%5Cn%20%20font-size%3A%20%40offer-size%3B%5Cn%20%20font-weight%3A%20200%3B%5Cn%20%20text-shadow%3A%200%200.067em%200%20%40offer-shadow-fill%3B%5Cn%20%20text-align%3A%20center%3B%5Cn%20%20padding%3A%202ex%202em%3B%5Cn%20%20background-color%3A%20%40offer-fill%3B%5Cn%20%20color%3A%20contrast(%40offer-fill)%3B%5Cn%5Cn%20%20p%20%7B%5Cn%20%20%20%20margin%3A%200%3B%5Cn%20%20%20%20line-height%3A%20%40offer-leading%3B%5Cn%20%20%7D%5Cn%5Cn%20%20.detail%20%7B%5Cn%20%20%20%20letter-spacing%3A%20%40offer-tracking%3B%5Cn%20%20%7D%5Cn%5Cn%20%20.detail%2C%20.price%2C%20.button%20%7B%5Cn%20%20%20%20display%3A%20inline-block%3B%5Cn%20%20%20%20vertical-align%3A%20baseline%3B%20%2F%2Fdefault.%20can%20remove%20this%5Cn%20%20%7D%5Cn%5Cn%20%20.price%20%7B%5Cn%20%20%20%20font-size%3A%201.44em%3B%5Cn%20%20%20%20font-weight%3A%20400%3B%5Cn%20%20%20%20letter-spacing%3A%20%40offer-price-tracking%3B%5Cn%20%20%7D%5Cn%5Cn%20%20.price%2C%20.button%20%7B%5Cn%20%20%20%20margin%3A%200.5ex%3B%5Cn%20%20%7D%5Cn%5Cn%20%20%3Alink%2C%5Cn%20%20%3Avisited%20%7B%5Cn%20%20%20%20color%3A%20inherit%3B%5Cn%20%20%7D%5Cn%5Cn%20%20.button%20%7B%5Cn%20%20%20%20font-weight%3A%20400%3B%5Cn%20%20%20%20border%3A%200.1em%20solid%3B%5Cn%20%20%20%20border-radius%3A%200.67ex%3B%5Cn%20%20%20%20padding%3A%20.5ex%20.5em%3B%5Cn%20%20%20%20letter-spacing%3A%20%40offer-button-tracking%3B%5Cn%5Cn%20%20%20%20%26%3Alink%20%7B%5Cn%20%20%20%20%20%20text-decoration%3A%20none%3B%5Cn%20%20%20%20%7D%5Cn%20%20%20%20%26%3Ahover%20%7B%5Cn%20%20%20%20%20%20background-color%3A%20%40offer-button-fill%3B%5Cn%20%20%20%20%20%20color%3A%20%40offer-fill%3B%5Cn%20%20%20%20%20%20text-shadow%3A%20none%3B%5Cn%20%20%20%20%20%20box-shadow%3A%200%200%200.067em%20%40offer-shadow-fill%3B%5Cn%20%20%20%20%7D%5Cn%20%20%7D%5Cn%7D%40font%3Aadobe-clean%3B%22%5D%7D */

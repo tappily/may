@@ -1,0 +1,99 @@
+.hero {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 2rem;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  flex: 1;
+  overflow-x: hidden;
+}
+@media screen and (max-width: 84rem) {
+  .hero {
+    flex-flow: column;
+  }
+}
+.hero .image {
+  flex: 1 1 auto;
+  max-width: 100%;
+  overflow: hidden;
+  background-image: none;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.hero .image:after {
+  visibility: hidden;
+  content: none;
+}
+.hero label {
+  flex: 1 0 auto;
+  font-size: 3em;
+  line-height: 0.85;
+  background-color: rgba(128, 128, 128, 0.5);
+  color: white;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  padding: 0.1ex 0.1em;
+  margin-left: -1.2em;
+}
+@media screen and (max-width: 84rem) {
+  .hero label {
+    margin-left: 0;
+    margin-top: -1.1em;
+    flex-flow: column;
+  }
+}
+.hero label:after {
+  align-self: center;
+  display: block;
+  content: "\25B6";
+  text-align: center;
+  border-radius: 0.25ex;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 1em;
+  width: 1em;
+  line-height: 0.88;
+}
+.hero figcaption {
+  display: flex;
+  flex-flow: column;
+  margin: 0;
+  box-sizing: border-box;
+  align-self: center;
+  padding: 2ex 2em;
+  min-width: 42rem;
+  max-width: 63rem;
+}
+@media screen and (max-width: 42rem) {
+  .hero figcaption {
+    padding: 1ex 1em;
+    min-width: 0;
+    max-width: 100%;
+    align-self: auto;
+  }
+}
+.hero figcaption .title {
+  display: inline-block;
+  font-size: 2em;
+  line-height: 0.85;
+  font-weight: 200;
+  text-transform: uppercase;
+  margin: 0.033ex 0;
+  align-content: center;
+}
+.hero figcaption .detail {
+  position: relative;
+  display: block;
+  font-size: 1em;
+  line-height: 1.12;
+  font-weight: 200;
+  margin: 0.5ex 0;
+}
+.hero figcaption .button {
+  align-self: flex-end;
+  font-size: 0.67em;
+}
+/*# sourceMappingURL=data:application/json,%7B%22version%22%3A3%2C%22sources%22%3A%5B%22src%2Fless%2Fsite%2Fproduct%2Fhero.less%22%5D%2C%22names%22%3A%5B%5D%2C%22mappings%22%3A%22AAKA%3BEAME%2CaAAA%3BEACA%2C8BAAA%3BEACA%2CaAAa%2C6BAAb%3BEACA%2CeAAA%3BEACA%2CcAAA%3BEACA%2CSAAA%3BEACA%2CUAAA%3BEACA%2COAAA%3BEACA%2CkBAAA%3B%3BAAMA%2CmBAJuD%3BEAIvD%3BIAHE%2CiBAAA%3B%3B%3BAAjBJ%2CKAoBE%3BEACE%2CcAAA%3BEACA%2CeAAA%3BEACA%2CgBAAA%3BEAEA%2CsBAAA%3BEACA%2CsBAAA%3BEACA%2CkCAAA%3BEACA%2C4BAAA%3B%3BAAEA%2CKAVF%2COAUG%3BEACC%2CkBAAA%3BEACA%2CaAAA%3B%3BAAhCN%2CKAoCE%3BEACE%2CcAAA%3BEACA%2CcAAA%3BEACA%2CiBAAA%3BEACA%2C0CAAA%3BEACA%2CYAAA%3BEACA%2CsBAAA%3BEACA%2CaAAA%3BEACA%2CuBAAA%3BEAEA%2CoBAAA%3BEACA%2CmBAAA%3B%3BAAQA%2CmBANuD%3BEAMvD%2CKAnBF%3BIAcI%2CcAAA%3BIACA%2CkBAAA%3BIACA%2CiBAAA%3B%3B%3BAAGF%2CKAnBF%2CMAmBG%3BEACC%2CkBAAA%3BEACA%2CcAAA%3BEACA%2CSAAS%2COAAT%3BEACA%2CkBAAA%3BEACA%2CqBAAA%3BEACA%2CoCAAA%3BEACA%2CWAAA%3BEACA%2CUAAA%3BEACA%2CiBAAA%3B%3BAAhEN%2CKAoEE%3BEACE%2CaAAA%3BEACA%2CiBAAA%3BEACA%2CSAAA%3BEACA%2CsBAAA%3BEACA%2CkBAAA%3BEACA%2CgBAAA%3BEACA%2CgBAAA%3BEACA%2CgBAAA%3B%3BAASA%2CmBAPiD%3BEAOjD%2CKAjBF%3BIAWI%2CgBAAA%3BIACA%2CYAAA%3BIACA%2CeAAA%3BIACA%2CgBAAA%3B%3B%3BAAlFN%2CKAoEE%2CWAiBE%3BEACE%2CqBAAA%3BEACA%2CcAAA%3BEACA%2CiBAAA%3BEACA%2CgBAAA%3BEACA%2CyBAAA%3BEACA%2CiBAAA%3BEACA%2CqBAAA%3B%3BAA5FN%2CKAoEE%2CWA2BE%3BEACE%2CkBAAA%3BEACA%2CcAAA%3BEACA%2CcAAA%3BEACA%2CiBAAA%3BEACA%2CgBAAA%3BEACA%2CeAAA%3B%3BAArGN%2CKAoEE%2CWAoCE%3BEACE%2CoBAAA%3BEACA%2CiBAAA%22%2C%22sourcesContent%22%3A%5B%22%2F%2Fdefaults%5Cn%40hero-line-length%3A%2042rem%3B%5Cn%40hero-fill%3A%20gray%3B%5Cn%5Cn%2F%2Fdefine%5Cn.hero%20%7B%5Cn%5Cn%20%20%26--super%20%7B%5Cn%20%20%20%20%2F%2Fmax-height%3A%2080vh%3B%5Cn%20%20%7D%5Cn%5Cn%20%20display%3A%20flex%3B%5Cn%20%20justify-content%3A%20space-between%3B%5Cn%20%20font-family%3A%20'Source%20Sans%20Pro'%2C%20sans-serif%3B%5Cn%20%20font-size%3A%202rem%3B%5Cn%20%20line-height%3A%201%3B%5Cn%20%20margin%3A%200%3B%5Cn%20%20padding%3A%200%3B%5Cn%20%20flex%3A%201%3B%5Cn%20%20overflow-x%3A%20hidden%3B%5Cn%5Cn%20%20%40media%20screen%20and%20(max-width%3A%20(%40hero-line-length%20*%202))%20%7B%5Cn%20%20%20%20flex-flow%3A%20column%3B%5Cn%20%20%7D%5Cn%5Cn%20%20.image%20%7B%5Cn%20%20%20%20flex%3A%201%201%20auto%3B%5Cn%20%20%20%20max-width%3A%20100%25%3B%5Cn%20%20%20%20overflow%3A%20hidden%3B%5Cn%5Cn%20%20%20%20background-image%3A%20none%3B%5Cn%20%20%20%20background-size%3A%20cover%3B%5Cn%20%20%20%20background-position%3A%20center%20center%3B%5Cn%20%20%20%20background-repeat%3A%20no-repeat%3B%5Cn%5Cn%20%20%20%20%26%3Aafter%20%7B%5Cn%20%20%20%20%20%20visibility%3A%20hidden%3B%5Cn%20%20%20%20%20%20content%3A%20none%3B%5Cn%20%20%20%20%7D%5Cn%20%20%7D%5Cn%5Cn%20%20label%20%7B%5Cn%20%20%20%20flex%3A%201%200%20auto%3B%5Cn%20%20%20%20font-size%3A%203em%3B%5Cn%20%20%20%20line-height%3A%200.85%3B%5Cn%20%20%20%20background-color%3A%20fade(%40hero-fill%2C%2050%25)%3B%5Cn%20%20%20%20color%3A%20white%3B%5Cn%20%20%20%20box-sizing%3A%20border-box%3B%5Cn%20%20%20%20display%3A%20flex%3B%5Cn%20%20%20%20justify-content%3A%20center%3B%5Cn%5Cn%20%20%20%20padding%3A%200.1ex%200.1em%3B%5Cn%20%20%20%20margin-left%3A%20-1.2em%3B%5Cn%5Cn%20%20%20%20%40media%20screen%20and%20(max-width%3A%20(%40hero-line-length%20*%202))%20%7B%5Cn%20%20%20%20%20%20margin-left%3A%200%3B%5Cn%20%20%20%20%20%20margin-top%3A%20-1.1em%3B%5Cn%20%20%20%20%20%20flex-flow%3A%20column%3B%5Cn%20%20%20%20%7D%5Cn%5Cn%20%20%20%20%26%3Aafter%20%7B%5Cn%20%20%20%20%20%20align-self%3A%20center%3B%5Cn%20%20%20%20%20%20display%3A%20block%3B%5Cn%20%20%20%20%20%20content%3A%20%5C%22%5C%5C25B6%5C%22%3B%5Cn%20%20%20%20%20%20text-align%3A%20center%3B%5Cn%20%20%20%20%20%20border-radius%3A%200.25ex%3B%5Cn%20%20%20%20%20%20background-color%3A%20fade(black%2C%2050%25)%3B%5Cn%20%20%20%20%20%20height%3A%201em%3B%5Cn%20%20%20%20%20%20width%3A%201em%3B%5Cn%20%20%20%20%20%20line-height%3A%200.88%3B%5Cn%20%20%20%20%7D%5Cn%20%20%7D%5Cn%5Cn%20%20figcaption%20%7B%5Cn%20%20%20%20display%3A%20flex%3B%5Cn%20%20%20%20flex-flow%3A%20column%3B%5Cn%20%20%20%20margin%3A%200%3B%5Cn%20%20%20%20box-sizing%3A%20border-box%3B%5Cn%20%20%20%20align-self%3A%20center%3B%5Cn%20%20%20%20padding%3A%202ex%202em%3B%5Cn%20%20%20%20min-width%3A%20%40hero-line-length%3B%5Cn%20%20%20%20max-width%3A%20(%40hero-line-length%20*%201.5)%3B%5Cn%5Cn%20%20%20%20%40media%20screen%20and%20(max-width%3A%20%40hero-line-length)%20%7B%5Cn%20%20%20%20%20%20padding%3A%201ex%201em%3B%5Cn%20%20%20%20%20%20min-width%3A%200%3B%5Cn%20%20%20%20%20%20max-width%3A%20100%25%3B%5Cn%20%20%20%20%20%20align-self%3A%20auto%3B%5Cn%20%20%20%20%7D%5Cn%5Cn%20%20%20%20.title%20%7B%5Cn%20%20%20%20%20%20display%3A%20inline-block%3B%5Cn%20%20%20%20%20%20font-size%3A%202em%3B%5Cn%20%20%20%20%20%20line-height%3A%200.85%3B%5Cn%20%20%20%20%20%20font-weight%3A%20200%3B%5Cn%20%20%20%20%20%20text-transform%3A%20uppercase%3B%5Cn%20%20%20%20%20%20margin%3A%200.033ex%200%3B%5Cn%20%20%20%20%20%20align-content%3A%20center%3B%5Cn%20%20%20%20%7D%5Cn%5Cn%20%20%20%20.detail%20%7B%5Cn%20%20%20%20%20%20position%3A%20relative%3B%5Cn%20%20%20%20%20%20display%3A%20block%3B%5Cn%20%20%20%20%20%20font-size%3A%201em%3B%5Cn%20%20%20%20%20%20line-height%3A%201.12%3B%5Cn%20%20%20%20%20%20font-weight%3A%20200%3B%5Cn%20%20%20%20%20%20margin%3A%200.5ex%200%3B%5Cn%20%20%20%20%7D%5Cn%5Cn%20%20%20%20.button%20%7B%5Cn%20%20%20%20%20%20align-self%3A%20flex-end%3B%5Cn%20%20%20%20%20%20font-size%3A%200.67em%3B%5Cn%20%20%20%20%7D%5Cn%20%20%7D%5Cn%7D%5Cn%5Cn.hero-figure(%40i%2C%20%40src%2C%20%40fill%3Asilver)%20%7B%5Cn%20%20%23hero-%40%7Bi%7D%20%7B%5Cn%20%20%20%20background-color%3A%20%40fill%3B%5Cn%20%20%20%20color%3A%20mix(contrast(%40fill)%2C%20%40fill%2C%2075%25)%3B%5Cn%20%20%20%20label%20%7B%5Cn%20%20%20%20%20%20background-color%3A%20fade(%40fill%2C%2050%25)%3B%5Cn%5Cn%20%20%20%20%20%20%26%3Aafter%20%7B%5Cn%20%20%20%20%20%20%20%20background-color%3A%20fade(mix(%40fill%2C%20black%2C%2033.33%25)%2C%2050%25)%3B%5Cn%20%20%20%20%20%20%7D%5Cn%20%20%20%20%7D%5Cn%20%20%20%20.image%20%7B%5Cn%20%20%20%20%20%20background-image%3A%20url(%40src)%3B%5Cn%20%20%20%20%20%20%26%3Aafter%20%7B%5Cn%20%20%20%20%20%20%20%20content%3A%20url(%40src)%3B%5Cn%20%20%20%20%20%20%7D%5Cn%20%20%20%20%7D%5Cn%20%20%7D%5Cn%7D%40font%3Aadobe-clean%3B%22%5D%7D */
