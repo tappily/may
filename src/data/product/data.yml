@@ -1,1 +1,4 @@
 title: Adobe Products
+styles:
+  - default.css
+  - product.css
